@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2pn2onpuup6h"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_qkwcu"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Study/RandomNotes.gd" id="2_4gohi"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Study/Note.gd" id="3_td2ga"]
+
+[node name="ReadNotes" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_qkwcu")
+action_type = "random_note"
+pass_time = true
+action_name = "Read Notes"
+history_text = "Through all the piles and piles of papers, and books, you uncover a piece of reading material."
+update_player = true
+ap_cost = 5
+sanity_effect = 5
+
+[node name="RandomNotes" type="Node" parent="."]
+script = ExtResource("2_4gohi")
+
+[node name="BasicNote2" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Sources toggle between Active and Non-Active states, influencing the Canvas when active, generating measurable Ephemeral Currents. Dormant states render the associated Point seemingly nonexistent."
+
+[node name="BasicNote3" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Active Sources store Ephemeral Currents, the Canvas's cosmic catalysts. These currents possess the transformative power to mold and modify the universe's structure."
+
+[node name="BasicNote4" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Sources engage in data exchange with adjacent Points, forming a web of connectivity. This facilitates the dynamic interplay of Ephemeral Currents, shaping the Canvas's intricate structure."
+
+[node name="BasicNote5" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Ephemeral Currents manifest in diverse forms, each with its own set of rules. The Five Forms, Three Fidelities, and Three Foci define their characteristics and behavior.
+Forms dictate the state of manifestation—whether gaseous, liquid, liquid-like solid, or solid. Fidelities determine the current's positivity, neutrality, or negativity. Foci influence its behavior—negative, neutral, or positive."
+
+[node name="BasicNote6" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "The Nine Fluxes, polarized forces influencing Ephemeral Currents, range from strong negative to strong positive entanglements. Radiances and Ambiences, positive and negative lights and heats, contribute to the intricate dance of energy within the Canvas."
+
+[node name="BasicNote7" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Qualia, with their distinctive textures and attributes, add complexity to Ephemeral Current interactions. The Nine Quantia govern intensity, determining the output level of these currents—crucial factors in understanding the dynamic and ever-changing nature of the Canvas."
+
+[node name="BasicNote8" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Ephemeral Currents interact with gravitational forces, both positive (Atra) and negative (Otra), influencing the spatial distribution within the Canvas. Entities—positive (Sol) and negative (Mor)—add animation to these currents, shaping the Canvas's dynamic nature."
+
+[node name="BasicNote9" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Founts (Ekta, Enda, Nekta) contribute to the overall polarity of Ephemeral Currents, influencing their interactions. Radiances (Embra, Glas) play a crucial role in determining the heat distribution within the Canvas, adding another layer to the complex web of energy flows.
+"
+
+[node name="BasicNote10" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Ephemeral Currents engage in intricate data exchanges with adjacent Points, creating Unions or Archemata. These Unions result in unique effects, shaping the Canvas's properties based on the combined attributes of the interacting currents.
+"
+
+[node name="BasicNote11" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "The polarity of Ephemeral Currents governs their interactions. Like polarities attract, forming clusters of similar currents, while opposing polarities repel. This fundamental principle influences the spatial arrangement and distribution of currents within the Canvas."
+
+[node name="BasicNote12" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Ephemeral Currents adhere to the Law of Conservation, ensuring a constant total amount within the Canvas. Transformations occur, redistributing currents to restore equilibrium. This principle guides the Canvas in maintaining stability despite the ever-changing nature of its energy flows.
+"
+
+[node name="BasicNote13" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "Qualia, representing the textures and attributes of Ephemeral Currents, contribute to the complexity of their interactions. Understanding the diverse Qualia—jagged, smooth, bumpy, cracked, pitted, spongy, granular, wavy, smooth—provides insights into the Canvas's nuanced behavior.
+"
+
+[node name="BasicNote14" type="Node" parent="RandomNotes"]
+script = ExtResource("3_td2ga")
+note_name = "Test"
+note_text = "The Nine Quantia determine the intensity levels of Ephemeral Currents. Ranging from Ono (10% Output) to Nona (90% Output), these Quantia influence the strength and impact of the currents, adding variability to the Canvas's energy landscape.
+"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

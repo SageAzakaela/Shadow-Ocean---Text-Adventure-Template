@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnhgokm1654s"
+path="res://.godot/imported/Minds Eye.mp3-f5da0a2c0115c966c50966c0461ef537.mp3str"
+
+[deps]
+
+source_file="res://Game/Music/Minds Eye.mp3"
+dest_files=["res://.godot/imported/Minds Eye.mp3-f5da0a2c0115c966c50966c0461ef537.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

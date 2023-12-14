@@ -1,0 +1,1009 @@
+[gd_scene load_steps=52 format=3 uid="uid://d3nfs3u5jd3pi"]
+
+[ext_resource type="AudioStream" uid="uid://bodelflr24igj" path="res://Game/Music/azaFMP3_scene_GirlInTheMirror.mp3" id="1_dh6xk"]
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_xte7i"]
+[ext_resource type="Script" path="res://Game/Info/InfoContainer.gd" id="2_8sy8j"]
+[ext_resource type="Script" path="res://Game/History/HistoryContainer.gd" id="2_rkrji"]
+[ext_resource type="AudioStream" uid="uid://csw2cpps3grk" path="res://SO_MLS_click_lithium.wav" id="3_6hmri"]
+[ext_resource type="Script" path="res://Game/Objectives/ObjectiveContainer.gd" id="3_7usak"]
+[ext_resource type="Script" path="res://Game/Objectives/Objective.gd" id="4_7wvcf"]
+[ext_resource type="Texture2D" uid="uid://onpibtqdh0no" path="res://Game/Images/Bedroom.png" id="5_e4ggx"]
+[ext_resource type="PackedScene" uid="uid://bq8ti0g2jojac" path="res://Game/ActionBar/action_button.tscn" id="5_ej4v7"]
+[ext_resource type="Script" path="res://Game/Objectives/World/Home/ConfusedCondition.gd" id="5_qd2oj"]
+[ext_resource type="Script" path="res://Game/Images/Image.gd" id="6_a7826"]
+[ext_resource type="Texture2D" uid="uid://wu36nsys2ur5" path="res://Game/Images/Alchemy Lab.png" id="6_f237q"]
+[ext_resource type="Script" path="res://Game/BeginGame.gd" id="8_ia7rv"]
+[ext_resource type="Texture2D" uid="uid://cwhmwyu54rpxl" path="res://Game/Images/ControlRoom.png" id="8_inful"]
+[ext_resource type="AudioStream" uid="uid://v7knjhp4d31a" path="res://Ambience/200088_rossjuterbock_vitaminc-tablet-dissolving-in-water-bubbling-19060.mp3" id="8_nbd4w"]
+[ext_resource type="PackedScene" uid="uid://cjk6jvv0i25di" path="res://Game/ActionBar/Remember/remember_mechanic.tscn" id="8_uycf0"]
+[ext_resource type="PackedScene" uid="uid://bv1c85kqujdcx" path="res://Game/ActionBar/Remember/memory.tscn" id="9_0d0et"]
+[ext_resource type="Texture2D" uid="uid://ib2ugre36u0l" path="res://Game/Images/LivingRoom.png" id="9_mfo7k"]
+[ext_resource type="Texture2D" uid="uid://d1jagfuld0587" path="res://Game/Images/Study.png" id="10_dqs0o"]
+[ext_resource type="Texture2D" uid="uid://ytal43dig407" path="res://Game/Images/BeachOfSilverSand_Umbra1.png" id="11_v288t"]
+[ext_resource type="Texture2D" uid="uid://bb8nhv17myof0" path="res://Game/Images/BeachOfSilverSand_Umbra2_rocky.png" id="12_5nnyg"]
+[ext_resource type="Texture2D" uid="uid://b1b0mymeq4101" path="res://Game/Images/BeachOfSilverSand_Umbra3.png" id="13_03psq"]
+[ext_resource type="AudioStream" uid="uid://b6s4qcme3tn0" path="res://Ambience/relaxing-ocean-waves-high-quality-recorded-177004.mp3" id="13_6k0mf"]
+[ext_resource type="Texture2D" uid="uid://xt4jvytokfhq" path="res://Game/Images/Village.png" id="14_h010g"]
+[ext_resource type="Texture2D" uid="uid://baqv6uvi88aj6" path="res://Game/Images/Tavern.png" id="15_6qj7p"]
+[ext_resource type="AudioStream" uid="uid://csfpdvbm3hk8" path="res://Ambience/waves-hitting-the-rocks-16680.mp3" id="15_7b5ey"]
+[ext_resource type="Texture2D" uid="uid://b2q5qpfeu28ym" path="res://Game/Images/Port.png" id="16_2trvt"]
+[ext_resource type="AudioStream" uid="uid://b3o8io1xdmv67" path="res://Ambience/ocean-sea-soft-waves-121349.mp3" id="17_biho0"]
+[ext_resource type="Texture2D" uid="uid://dt4llhp1v4b2b" path="res://Game/Images/Shop.png" id="17_woyel"]
+[ext_resource type="Texture2D" uid="uid://cdamunxxaoqy" path="res://Game/Images/Forest2.png" id="18_ku0lq"]
+[ext_resource type="Script" path="res://Game/ActionBar/Remember/RememberTextEntry.gd" id="18_qyrw7"]
+[ext_resource type="Texture2D" uid="uid://b3hp3ngyjuwnv" path="res://Game/Images/Forest1.png" id="19_ml2ry"]
+[ext_resource type="Texture2D" uid="uid://dkq577r77br72" path="res://Game/Images/Forest3.png" id="20_6ainf"]
+[ext_resource type="AudioStream" uid="uid://dk101ukchj2rk" path="res://Ambience/small_town_bar_001-25847.mp3" id="20_qfl8d"]
+[ext_resource type="Texture2D" uid="uid://b8gb83x5rbk5h" path="res://Game/Images/Forest4.png" id="21_ao00s"]
+[ext_resource type="Texture2D" uid="uid://dmumpaaf5eobl" path="res://Game/Images/Forest5.png" id="22_pmsd5"]
+[ext_resource type="AudioStream" uid="uid://beewvxwhiri5r" path="res://Ambience/seaside-port-24581.mp3" id="22_y3cpn"]
+[ext_resource type="Texture2D" uid="uid://3ol0qur6u5jr" path="res://Game/Images/Forest6.png" id="23_nduj7"]
+[ext_resource type="Texture2D" uid="uid://1qh3lgit4s4m" path="res://Game/Images/Mountain1.png" id="24_ob846"]
+[ext_resource type="Texture2D" uid="uid://cn2qeufjwagcw" path="res://Game/Images/Mountain2.png" id="25_hsia4"]
+[ext_resource type="AudioStream" uid="uid://pw4cuoj764fw" path="res://Ambience/forest-ambience-with-cuckoo-birds-chirping-123046.mp3" id="25_jkilx"]
+[ext_resource type="Texture2D" uid="uid://c7wpaihljep1a" path="res://Game/Images/Mountain3.png" id="26_qktyc"]
+[ext_resource type="Texture2D" uid="uid://cku413ltw03qy" path="res://Game/Images/Mountain4.png" id="27_1wxbv"]
+[ext_resource type="AudioStream" uid="uid://1pc6cyj87b1l" path="res://Ambience/nature-soundstropicaljunglebirds-108380.mp3" id="27_m7nym"]
+[ext_resource type="Texture2D" uid="uid://bxxojgtoe1gvw" path="res://Game/Images/Ruins.png" id="28_f7dr5"]
+[ext_resource type="Texture2D" uid="uid://dutav77b7axkd" path="res://Game/Images/SeekerVillage.png" id="28_ghkkp"]
+[ext_resource type="Texture2D" uid="uid://dhuu2ib82yyuw" path="res://Game/Images/Ruins2.png" id="29_cb01s"]
+[ext_resource type="AudioStream" uid="uid://qeppxkiom2ck" path="res://Ambience/birds-singing-calm-river-nature-ambient-sound-127411.mp3" id="30_aa0wp"]
+[ext_resource type="AudioStream" uid="uid://bjqni48pbi6gr" path="res://Ambience/wind-in-trees-117477.mp3" id="40_3leiy"]
+[ext_resource type="Texture2D" uid="uid://b660fjxnog77q" path="res://Game/NPCImages/Visitor.png" id="41_u0xuw"]
+[ext_resource type="Script" path="res://Game/NPCImages/NPCImage.gd" id="42_ywe33"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_dh6xk")
+volume_db = -12.0
+pitch_scale = 0.9
+
+[node name="InteractNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6hmri")
+volume_db = -6.0
+
+[node name="InteractNoise2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6hmri")
+volume_db = -6.0
+pitch_scale = 0.63
+
+[node name="Background" type="PanelContainer" parent="."]
+modulate = Color(0.188235, 0.188235, 0.188235, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.00154321
+anchor_right = 1.0
+anchor_bottom = 0.998457
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="Background"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Shadow Ocean 2: The Keeper"
+horizontal_alignment = 1
+
+[node name="ImagePanel" type="PanelContainer" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190972
+anchor_top = 0.0108025
+anchor_right = 0.565972
+anchor_bottom = 0.317901
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="ImagePanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="Bedroom" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_e4ggx")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Bedroom"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Bedroom"]
+bus = &"Ambience"
+
+[node name="Alchemy_lab" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_f237q")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Alchemy Lab"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Alchemy_lab"]
+stream = ExtResource("8_nbd4w")
+volume_db = -8.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="ControlRoom" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_inful")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Control Room"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/ControlRoom"]
+bus = &"Ambience"
+
+[node name="LivingRoom" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_mfo7k")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Living Room"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/LivingRoom"]
+bus = &"Ambience"
+
+[node name="Study" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("10_dqs0o")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Study"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Study"]
+bus = &"Ambience"
+
+[node name="BeachOfSilverSand" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("11_v288t")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Beach Of Silver Sand"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/BeachOfSilverSand"]
+stream = ExtResource("13_6k0mf")
+volume_db = -8.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="BeachOfSilverSandEast" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("12_5nnyg")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Beach Of Silver Sand East"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/BeachOfSilverSandEast"]
+stream = ExtResource("15_7b5ey")
+volume_db = -8.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="BeachOfSilverSandWest" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_03psq")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Beach Of Silver Sand West"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/BeachOfSilverSandWest"]
+stream = ExtResource("17_biho0")
+volume_db = -8.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="VillageOfKaraNull" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_h010g")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Village of Kara Null"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/VillageOfKaraNull"]
+bus = &"Ambience"
+
+[node name="Tavern" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_6qj7p")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Tavern"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Tavern"]
+stream = ExtResource("20_qfl8d")
+volume_db = -11.49
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Port" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("16_2trvt")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Port"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Port"]
+stream = ExtResource("22_y3cpn")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Shop" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("17_woyel")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Shop"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Shop"]
+bus = &"Ambience"
+
+[node name="Forest1" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("18_ku0lq")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Forest 1"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest1"]
+stream = ExtResource("25_jkilx")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Forest2" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("19_ml2ry")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Forest 2"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest2"]
+stream = ExtResource("27_m7nym")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Forest3" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("20_6ainf")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Forest 3"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest3"]
+stream = ExtResource("25_jkilx")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Forest4" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("23_nduj7")
+expand_mode = 2
+script = ExtResource("6_a7826")
+location = "Forest 4"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest4"]
+stream = ExtResource("30_aa0wp")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Forest5" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("22_pmsd5")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Forest 5"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest5"]
+stream = ExtResource("27_m7nym")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Forest6" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("21_ao00s")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Forest 6"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Forest6"]
+stream = ExtResource("30_aa0wp")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Mountain1" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("24_ob846")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Mountain 1"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Mountain1"]
+stream = ExtResource("30_aa0wp")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Mountain2" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("25_hsia4")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Mountain 2"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Mountain2"]
+stream = ExtResource("25_jkilx")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Mountain3" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("26_qktyc")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Mountain 3"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Mountain3"]
+stream = ExtResource("30_aa0wp")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Mountain4" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("27_1wxbv")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Mountain 4"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Mountain4"]
+stream = ExtResource("25_jkilx")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Ruins1" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("28_f7dr5")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Ruins 1"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Ruins1"]
+stream = ExtResource("30_aa0wp")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="Ruins2" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("29_cb01s")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Ruins 2"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/Ruins2"]
+stream = ExtResource("25_jkilx")
+volume_db = -5.208
+pitch_scale = 0.93
+autoplay = true
+bus = &"Ambience"
+
+[node name="SeekerVillage" type="TextureRect" parent="ImagePanel"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("28_ghkkp")
+expand_mode = 2
+flip_h = true
+script = ExtResource("6_a7826")
+location = "Seeker Village"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="ImagePanel/SeekerVillage"]
+stream = ExtResource("40_3leiy")
+pitch_scale = 0.9
+autoplay = true
+bus = &"Ambience"
+
+[node name="HistoryPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190972
+anchor_top = 0.33179
+anchor_right = 0.565972
+anchor_bottom = 0.521605
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="HistoryPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HistoryPanel"]
+layout_mode = 2
+
+[node name="HistoryContainer" type="VBoxContainer" parent="HistoryPanel/ScrollContainer"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_rkrji")
+
+[node name="NavigationPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190972
+anchor_top = 0.566358
+anchor_right = 0.210069
+anchor_bottom = 0.805556
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="NavigationPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NavigationPanel"]
+layout_mode = 2
+follow_focus = true
+
+[node name="NavigationContainer" type="GridContainer" parent="NavigationPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NPCPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405382
+anchor_top = 0.566358
+anchor_right = 0.566841
+anchor_bottom = 0.805556
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="NPCPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NPCPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="NPCContainer" type="GridContainer" parent="NPCPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CurrentNPCPanel" type="PanelContainer" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.233507
+anchor_top = 0.566358
+anchor_right = 0.394966
+anchor_bottom = 0.805556
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="CurrentNPCPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="Visitor" type="TextureRect" parent="CurrentNPCPanel"]
+layout_mode = 2
+texture = ExtResource("41_u0xuw")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "Visitor"
+
+[node name="ThingsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.597222
+anchor_top = 0.566358
+anchor_right = 0.760416
+anchor_bottom = 0.805556
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="ThingsPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ThingsPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ThingsContainer" type="GridContainer" parent="ThingsPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SkillPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.792535
+anchor_top = 0.268519
+anchor_right = 0.967014
+anchor_bottom = 0.518518
+offset_bottom = 3.05176e-05
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="SkillPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="SkillScroll" type="ScrollContainer" parent="SkillPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_xte7i")
+
+[node name="SkillContainer" type="VBoxContainer" parent="SkillPanel/SkillScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_xte7i")
+
+[node name="ObjectivePanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.597222
+anchor_top = 0.268519
+anchor_right = 0.771701
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="ObjectivePanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ObjectivePanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ObjectiveContainer" type="GridContainer" parent="ObjectivePanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_xte7i")
+script = ExtResource("3_7usak")
+
+[node name="PrimaryObjective" type="Button" parent="ObjectivePanel/ScrollContainer/ObjectiveContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme = ExtResource("1_xte7i")
+text = "Objective"
+script = ExtResource("4_7wvcf")
+objective = "Confused"
+objective_description = "You're having trouble remembering exactly who [you] are, [why you're here], and other things like [your name].  It is rather annoying."
+
+[node name="Condition" type="Node" parent="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective"]
+script = ExtResource("5_qd2oj")
+
+[node name="InfoPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.597222
+anchor_top = 0.0246914
+anchor_right = 0.979167
+anchor_bottom = 0.226852
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="InfoPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="InfoPanelContainer" type="VBoxContainer" parent="InfoPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="InfoHSeperator" type="HBoxContainer" parent="InfoPanel/InfoPanelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="InfoLabelContainer" type="VBoxContainer" parent="InfoPanel/InfoPanelContainer/InfoHSeperator"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_xte7i")
+
+[node name="Time" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Time:"
+
+[node name="Location" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Location:"
+
+[node name="ActionPoints" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Action Points:"
+
+[node name="Health" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Health:"
+
+[node name="Sanity" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Sanity:"
+
+[node name="InfoContainer" type="VBoxContainer" parent="InfoPanel/InfoPanelContainer/InfoHSeperator"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_xte7i")
+script = ExtResource("2_8sy8j")
+
+[node name="Time" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "time"
+
+[node name="Location" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "where"
+
+[node name="ActionPoints" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "actions"
+
+[node name="Health" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "helth"
+
+[node name="Sanity" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "insane"
+
+[node name="InventoryPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.789931
+anchor_top = 0.566358
+anchor_right = 0.979167
+anchor_bottom = 0.816358
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="InventoryPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ItemScroll" type="ScrollContainer" parent="InventoryPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_xte7i")
+
+[node name="ItemContainer" type="VBoxContainer" parent="InventoryPanel/ItemScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_xte7i")
+
+[node name="ActionPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.845679
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xte7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="BGPANEL" type="Panel" parent="ActionPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionPanel"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+alignment = 2
+
+[node name="MemoryContainer" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="RememberMechanic" parent="ActionPanel/VBoxContainer/MemoryContainer" instance=ExtResource("8_uycf0")]
+
+[node name="EmptyMemory" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+
+[node name="KaraNull" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+
+[node name="Alchemist" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "alchemist"
+memory_content = Array[String](["The study of reality, the study of change, the study of the laws that govern the Canvas."])
+unlock_skill = true
+skill_name = "Expert Alchemist"
+
+[node name="Syndicate" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+
+[node name="KiminiDalaz" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+
+[node name="Caelux" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+
+[node name="Umbra" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "umbra"
+memory_content = Array[String](["The First Prime Material.
+
+The Umbra is the most common Union of Ephemeral Currents in the known Canvas. It is infinite and enigmatic.", "The Umbra consists primarily of the two Ephemeral Currents: Um (Shadow) and Brya (Liquid).", "You remember when you first saw the Umbra, it feels like a lifetime ago... It's irridisscent shadow englufing the horizon.", "To think that people [Journey] through it is a feat worth considering. The ingenuity of mankind against such odds is truly remarkable.", "[Umbra Sickness], feh.
+
+Long ago, the act of staring into the Umbra was considered a ritual among early alchemists.  Now it seems those who could become in tune with it are persecuted... Like yourself.", "In your studies, you've learned the following. 
+
+Umbra is toxic to ingest.
+Umbra asserts pressure in all directions, and manifests as irridiscent black liquid. The Umbra is thought and understood to be infinite -- And the only reason the [Spheres] exist is because Umbra's interaction with the Second Prime Material, [Caelux] causes a force to seperate the two. ", "You've stared it into ever day for years now it seems.  And each time you do, you become this much closer to realizing the truth. The voices you hear beckon you to [Go Dee[er]. To [Journey].", "To [Journey] through the Umbra is a harrowing task. Special ships called [Journers] are needed to facilitate the endeavor -- all thanks to the alchemical Genius of [Kimini Dalaz], inventor of the [Zeal Pressure Diffusal Engine].", "... Go Deeper...", "And Deeper Still..."])
+unlock_objective = true
+objective_path = "res://Game/Objectives/Memories/GoDeeper.tscn"
+
+[node name="GoDeeper" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "Go Deeper"
+memory_content = Array[String](["Go Deeper...", "... Deeper...", "... Deeper...", "... And Deeper Still..."])
+
+[node name="remember" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "remember"
+memory_content = Array[String](["You can [remember] any word wrapped in square brackets.", "You can additionally continue to remember the same word. New Memories may be found this way.", "Yep. That's all there is to say about that.", "What you want me to hold your hand too?  You can remember things. It's not impossible a concept to grasp."])
+
+[node name="lighthouse" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "lighthouse"
+memory_content = Array[String](["You live at a Lighthouse.  You work there too.", "It's a very nice prison, you suppose. Wait, why do you think that?", "Sometimes you like the solitude, other times it gnaws at the fiber of your being.", "It's hard work, but someones gotta do it. Without you, where would the village be, after all? They need ships to reach port.", "Maybe it's not so bad. But this isn't how you wanted to be close to the Umbra."])
+
+[node name="why_youre_here" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "why you're here"
+memory_content = Array[String](["There was... some sort of a reason you're staying at the [lighthouse]. Maybe it was because you [chose to live here]?  Somehow that doesn't make sense.", "[Kara Null].... What's that name? What does that mean?", "Something about the [Syndicate]... The Syndicate of Alchemical Enlightenment!  You were an [Alchemist]!", "You're still an alchemist, you realize. It's not like they could take it away from you. Who though... The [Syndicate]?", "You remember that you were given a choice, and you remember you made the decision because you felt it kept you closer to [something you loved].  You can feel that. You just can't grasp it.", "The [Umbra]... It calls to you.", "To Journey So Deep.", "Wait... Do you really not remember?  It's so simple now, and you learn to accept it.", "Why be anywhere? Is that even something that's a choice?"])
+
+[node name="you" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "you"
+memory_content = Array[String](["You have a great reverence and fascination with the [Umbra].  Uncovering it's mysteries drives you.", "Hmm... What about you?  You ponder why anyone would spend time thinking about themselves. Is that not wrong?", "You. You wanna know all there is to know. You want to see all there is to see.", "You wished you could be a Journer Pilot. One day. Maybe it's too late.", "You're unsure about yourself. Does the enormity of the Canvas make your existence anything more than just a statistical probablity?", "You deserve to acheive great things. You need to do more. You must go deeper!"])
+
+[node name="your_name" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
+memory_key = "your name"
+memory_content = Array[String](["What is it? Darn it. You hate it when this happens. New Plan. Just respond to \"Hey You\" or whatever people call you. \"Lighthouse Person\" You recall someone from the [village] nearby saying once.", "Yeah. It's just not coming to you. You remember you used to know it. You remember it was a good name. But what it was, escapes you.", "You've kind of come to accept that you've simply forgotten. Has it really been so long since you needed to use it though?", "It's painful to keep thinking about this. You don't need it.", "Forget it! You don't want to remember!"])
+
+[node name="RememberTextEntry" type="LineEdit" parent="ActionPanel/VBoxContainer/MemoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 1
+theme = ExtResource("1_xte7i")
+placeholder_text = "Type in Keyword then press Enter to Remember something about a Keyword."
+alignment = 1
+clear_button_enabled = true
+caret_blink = true
+script = ExtResource("18_qyrw7")
+
+[node name="ActionBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="ActionButton" parent="ActionPanel/VBoxContainer/ActionBar" instance=ExtResource("5_ej4v7")]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+destroy_action = true
+change_location = true
+new_location = "Home"
+exits = ["res://Game/Navigation/World/Home/Bedroom.tscn"]
+action_name = "Begin Game"
+history_text = ">>Welcome back, Keeper<<
+>>Anytime you see a word wrapped in brackets, it is something the Keeper has memories about.  To remember, simply type a word and press 'Enter'. You can remember a word multiple times.<<<
+>>Interact with and navigate through the world through using buttons on this screen.<<
+>> You can use the slider at the bottom to change the music as per your preferences.<<"
+add_memory = true
+add_memory_key = "game"
+add_memory_context = Array[String](["Yes, yes. You started the game.  That wasn't too long ago.  But to keep this more cohesive, lets not try and break the 4th wall too much, shall we?"])
+
+[node name="BeginGame" type="Node" parent="ActionPanel/VBoxContainer/ActionBar/ActionButton"]
+script = ExtResource("8_ia7rv")
+
+[node name="MusicBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+
+[node name="FrequencyTuner" type="HSlider" parent="ActionPanel/VBoxContainer/MusicBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10000.0
+tick_count = 34
+ticks_on_borders = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="ActionPanel/VBoxContainer/MusicBar"]
+
+[node name="Locations" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190972
+anchor_top = 0.540123
+anchor_right = 0.268229
+anchor_bottom = 0.570988
+offset_bottom = -3.05176e-05
+theme = ExtResource("1_xte7i")
+text = "Locations"
+
+[node name="People" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.415799
+anchor_top = 0.54321
+anchor_right = 0.664931
+anchor_bottom = 0.574074
+theme = ExtResource("1_xte7i")
+text = "People"
+metadata/_edit_use_anchors_ = true
+
+[node name="Things" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.597222
+anchor_top = 0.54321
+anchor_right = 0.846354
+anchor_bottom = 0.574074
+offset_top = 3.05176e-05
+offset_right = -6.10352e-05
+theme = ExtResource("1_xte7i")
+text = "Things"
+metadata/_edit_use_anchors_ = true
+
+[node name="Objectives" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.597222
+anchor_top = 0.234568
+anchor_right = 0.846354
+anchor_bottom = 0.265432
+theme = ExtResource("1_xte7i")
+text = "Objectives"
+
+[node name="Skills" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.792535
+anchor_top = 0.234568
+anchor_right = 1.04167
+anchor_bottom = 0.265433
+theme = ExtResource("1_xte7i")
+text = "Skills
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Inventory" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.792535
+anchor_top = 0.544753
+anchor_right = 1.04167
+anchor_bottom = 0.575617
+offset_top = 3.05176e-05
+offset_bottom = -3.05176e-05
+theme = ExtResource("1_xte7i")
+text = "Inventory
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="child_entered_tree" from="HistoryPanel/ScrollContainer/HistoryContainer" to="HistoryPanel/ScrollContainer/HistoryContainer" method="_on_child_entered_tree"]
+[connection signal="pressed" from="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective" to="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective" method="_on_pressed"]
+[connection signal="text_changed" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" method="_on_remember_text_entry_text_changed"]
+[connection signal="text_submitted" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective/Condition" method="_on_remember_text_entry_text_submitted"]
+[connection signal="text_submitted" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" method="_on_remember_text_entry_text_submitted"]
+[connection signal="pressed" from="ActionPanel/VBoxContainer/ActionBar/ActionButton" to="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" method="_on_action_button_pressed"]
+[connection signal="pressed" from="ActionPanel/VBoxContainer/ActionBar/ActionButton" to="ActionPanel/VBoxContainer/ActionBar/ActionButton/BeginGame" method="_on_action_button_pressed"]
+[connection signal="value_changed" from="ActionPanel/VBoxContainer/MusicBar/FrequencyTuner" to="ActionPanel/VBoxContainer/MusicBar" method="_on_frequency_tuner_value_changed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8ti0g2jojac"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_euwgp"]
+
+[node name="ActionButton" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_euwgp")
+action_name = "Test"
+user_input_text = "Testing"
+history_text = "It worked!"
+ap_cost = 25
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

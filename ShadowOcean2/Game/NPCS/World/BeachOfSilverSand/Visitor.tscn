@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://66li1cif3qjf"]
+
+[ext_resource type="Script" path="res://Game/NPCS/World/BeachOfSilverSand/Visitor.gd" id="1_kna3o"]
+[ext_resource type="Script" path="res://Game/NPCS/World/BeachOfSilverSand/VisitorCondition.gd" id="2_7q7pe"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="3_euev4"]
+
+[node name="Visitor" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "NPC
+"
+script = ExtResource("1_kna3o")
+
+[node name="Condition" type="Node" parent="."]
+script = ExtResource("2_7q7pe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_euev4")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

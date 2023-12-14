@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://qndfmt5f8rt5"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_slb64"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_slb64")
+location = "Forest 5"
+history_text = "You go deeper into the forest."
+exits = Array[String](["res://Game/Navigation/World/Forest/Forest4.tscn", "res://Game/Navigation/World/Forest/Forest6.tscn", "res://Game/Navigation/World/Ruins/Ruins1.tscn"])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

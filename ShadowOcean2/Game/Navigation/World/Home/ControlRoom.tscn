@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4pjer8x6lej4"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_u76wv"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_u76wv")
+location = "Control Room"
+history_text = "The winding staircase brings you to the top floor of your abode. This is the control room for the LightHouse, and contains a huge rotating light, some alchemical machines that operate it and a lovely view of the Umbra that taunts you with it's mystery."
+exits = Array[String](["res://Game/Navigation/World/Home/AlchemyLab.tscn", "res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/Home/Study.tscn"])
+locked = true
+locked_text = "You approach the door to the control room, but it doesn't budge!  Seems it's locked!"
+unlock_text = "You unlock the door with your silver key."
+key = "silver key"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

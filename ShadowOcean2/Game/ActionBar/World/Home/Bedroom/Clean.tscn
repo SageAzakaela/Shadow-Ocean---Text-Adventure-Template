@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://7e45rqqthciy"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_4slud"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Bedroom/Clean_Condition.gd" id="2_0t7rw"]
+
+[node name="Clean" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_4slud")
+destroy_action = true
+pass_time = true
+action_name = "Clean"
+history_text = "Alright, you tidy up a bit. But you don't get very far."
+update_player = true
+ap_cost = 10
+sanity_effect = -10
+grant_item = true
+item_to_grant = "silver key"
+item_name = "silver key"
+item_description = "A silver key. You're aware this unlocks the Control Room."
+item_type = "key"
+
+[node name="Condition" type="Node" parent="."]
+script = ExtResource("2_0t7rw")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

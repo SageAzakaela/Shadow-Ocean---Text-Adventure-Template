@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://quoi71vfpxu"]
+
+[ext_resource type="Script" path="res://Game/Objectives/Objective.gd" id="1_6cw2c"]
+[ext_resource type="Script" path="res://Game/Objectives/World/Home/ConfusedCondition.gd" id="2_rnk0g"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="3_nyuqf"]
+
+[node name="Objective" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Objective"
+script = ExtResource("1_6cw2c")
+objective = "Confused"
+objective_description = "You're having trouble remembering exactly who [you] are, [why you're here], and other things like [your name].  It is rather annoying."
+
+[node name="Condition" type="Node" parent="."]
+script = ExtResource("2_rnk0g")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nyuqf")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,54 @@
+[gd_resource type="AudioBusLayout" load_steps=6 format=3 uid="uid://cnr784rqvrotv"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_318p5"]
+resource_name = "Reverb"
+room_size = 0.46
+damping = 0.4
+spread = 0.8
+hipass = 0.25
+wet = 0.44
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_hexcs"]
+resource_name = "Delay"
+tap1_delay_ms = 400.0
+tap1_pan = 0.0
+tap2_active = false
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_s7dat"]
+resource_name = "PitchShift"
+pitch_scale = 0.5
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_v0ncy"]
+resource_name = "Reverb"
+room_size = 0.44
+damping = 0.21
+hipass = 0.49
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_s77nh"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1500.0
+resonance = 0.59
+
+[resource]
+bus/1/name = &"Type"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -12.9785
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_318p5")
+bus/1/effect/0/enabled = false
+bus/1/effect/1/effect = SubResource("AudioEffectDelay_hexcs")
+bus/1/effect/1/enabled = false
+bus/1/effect/2/effect = SubResource("AudioEffectPitchShift_s7dat")
+bus/1/effect/2/enabled = true
+bus/2/name = &"Ambience"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_v0ncy")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectLowPassFilter_s77nh")
+bus/2/effect/1/enabled = true

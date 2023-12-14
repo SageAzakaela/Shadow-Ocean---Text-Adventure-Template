@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwnn15d7wd66g"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_0nngl"]
+
+[node name="ActionButton" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_0nngl")
+pass_time = true
+action_name = "Sleep"
+history_text = "You have a lie down."
+update_player = true
+need_ap = false
+ap_cost = -100
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

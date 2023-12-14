@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ceq5034tfya1v"
+path="res://.godot/imported/Azakaela - Frozen Temple.ogg-a701c189de490b73e13ebc4cfdadc7af.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game/Music/Azakaela - Frozen Temple.ogg"
+dest_files=["res://.godot/imported/Azakaela - Frozen Temple.ogg-a701c189de490b73e13ebc4cfdadc7af.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

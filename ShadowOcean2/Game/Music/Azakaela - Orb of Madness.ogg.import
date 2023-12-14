@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhldkylpcn6i3"
+path="res://.godot/imported/Azakaela - Orb of Madness.ogg-e6ad4b3f0aefc3def4ae3a9ec1d149b1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game/Music/Azakaela - Orb of Madness.ogg"
+dest_files=["res://.godot/imported/Azakaela - Orb of Madness.ogg-e6ad4b3f0aefc3def4ae3a9ec1d149b1.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

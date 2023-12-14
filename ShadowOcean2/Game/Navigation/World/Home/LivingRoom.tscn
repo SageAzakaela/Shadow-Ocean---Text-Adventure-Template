@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvk8ybfs5txl1"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_8atql"]
+[ext_resource type="Script" path="res://Game/Navigation/World/Home/LivingRoomCondition.gd" id="2_mbowb"]
+
+[node name="Home_LivingRoom" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_8atql")
+location = "Living Room"
+history_text = "Ah yes, the Living Room. A Great place to laze about and kill time."
+exits = ["res://Game/Navigation/World/Home/AlchemyLab.tscn", "res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/Home/Study.tscn", "res://Game/Navigation/World/BeachOfSilverSand/BeachOfSilverSand.tscn"]
+NPCS = ["res://Game/NPCS/World/BeachOfSilverSand/Visitor.tscn"]
+
+[node name="Condition" type="Node" parent="."]
+script = ExtResource("2_mbowb")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

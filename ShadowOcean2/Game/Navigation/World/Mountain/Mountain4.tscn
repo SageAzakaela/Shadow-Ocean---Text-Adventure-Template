@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfhsx8ik5gqkp"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_fm80i"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_fm80i")
+location = "Mountain 4"
+history_text = "You hike  further up the mountain."
+exits = Array[String](["res://Game/Navigation/World/Mountain/Mountain2.tscn"])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

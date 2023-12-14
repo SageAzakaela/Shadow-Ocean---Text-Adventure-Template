@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://8y52ogl67v1g"]
+
+[ext_resource type="Script" path="res://Game/NPCS/NPC.gd" id="1_t6p8k"]
+
+[node name="NPC" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "NPC
+"
+script = ExtResource("1_t6p8k")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

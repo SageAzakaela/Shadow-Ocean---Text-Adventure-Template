@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1e4wbolc7o2l"]
+
+[ext_resource type="FontFile" uid="uid://c2subg7bs4v82" path="res://Game/Sanity/aetime2.ttf" id="1_jvcp5"]
+[ext_resource type="Script" path="res://Game/Sanity/SanityResponse.gd" id="2_3e5pv"]
+
+[sub_resource type="Animation" id="Animation_vbrwc"]
+resource_name = "12"
+length = 12.0
+loop_mode = 1
+step = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.494118, 0.329412, 1, 1), Color(0, 0.47451, 0.937255, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lbpdl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.494118, 0.329412, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3fth5"]
+_data = {
+"12": SubResource("Animation_vbrwc"),
+"RESET": SubResource("Animation_lbpdl")
+}
+
+[node name="SanityMessage" type="Label"]
+custom_minimum_size = Vector2(900, 0)
+theme_override_colors/font_color = Color(0.494118, 0.329412, 1, 1)
+theme_override_fonts/font = ExtResource("1_jvcp5")
+theme_override_font_sizes/font_size = 30
+text = "This is some Example Text that would display whenever you do something."
+autowrap_mode = 3
+script = ExtResource("2_3e5pv")
+
+[node name="Fade" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3fth5")
+}
+autoplay = "12"

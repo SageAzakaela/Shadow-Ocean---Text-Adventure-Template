@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmhc8b7dh4kil"
+path="res://.godot/imported/Temple of Wind.wav-6a48802f89fcec2e94ca6945e0c137a0.sample"
+
+[deps]
+
+source_file="res://Game/Music/Temple of Wind.wav"
+dest_files=["res://.godot/imported/Temple of Wind.wav-6a48802f89fcec2e94ca6945e0c137a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

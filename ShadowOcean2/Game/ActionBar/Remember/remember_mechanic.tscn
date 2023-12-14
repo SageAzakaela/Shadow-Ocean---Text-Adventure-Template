@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjk6jvv0i25di"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/Remember/RememberMechanic.gd" id="1_fy4pt"]
+
+[node name="RememberMechanic" type="Node"]
+script = ExtResource("1_fy4pt")

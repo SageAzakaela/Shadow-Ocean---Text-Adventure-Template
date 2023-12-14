@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd157144pdo7b"]
+
+[ext_resource type="Script" path="res://Game/Objectives/Objective.gd" id="1_mk8d7"]
+[ext_resource type="AudioStream" uid="uid://csw2cpps3grk" path="res://SO_MLS_click_lithium.wav" id="2_nximw"]
+
+[node name="Objective" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Objective"
+script = ExtResource("1_mk8d7")
+objective = "Go Deeper"
+objective_description = "The Umbra has beckoned you to Go Deeper. Your desire to travel through it's endless body, to see the other side is intense. You yearn to [Journey]."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nximw")
+volume_db = -12.564
+pitch_scale = 0.13
+autoplay = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

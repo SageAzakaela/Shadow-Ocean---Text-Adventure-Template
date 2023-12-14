@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dis1x7eywtoa1"]
+
+[ext_resource type="Script" path="res://Game/Skills/Skill.gd" id="1_kfrjr"]
+
+[node name="Skill" type="Label"]
+custom_minimum_size = Vector2(0, 32)
+horizontal_alignment = 1
+script = ExtResource("1_kfrjr")

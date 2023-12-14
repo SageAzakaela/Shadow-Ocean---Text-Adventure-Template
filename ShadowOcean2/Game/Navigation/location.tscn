@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmhxnsj0sas1t"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_rc6bj"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_rc6bj")
+location = "Testing"
+user_input_text = "Testing"
+history_text = "Testing"
+ap_cost = 100
+exits = ["res://Game/Navigation/location.tscn"]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

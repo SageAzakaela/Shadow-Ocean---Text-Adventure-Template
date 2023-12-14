@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://log75u6sraj7"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_aiu4w"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Study/RandomNotes.gd" id="2_qfa85"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Study/Note.gd" id="3_ec7nc"]
+
+[node name="ReadNotes" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_aiu4w")
+action_type = "random_note"
+pass_time = true
+action_name = "Read Notes"
+history_text = "Through all the piles and piles of papers, and books, you uncover a piece of reading material."
+update_player = true
+ap_cost = 10
+sanity_effect = 5
+skill_needed = "Self Care"
+skill_check_history_text = {
+"fail": "Nope. Absolutely not. You don't feel like it. Who cares? It's just you here, and the mess makes it cozy.",
+"pass": "Alright fine. You decide to clean the room a bit.  You tidy. But not too much. You don't exactly have enough energy or willingness, you do it almost out of spite."
+}
+
+[node name="RandomNotes" type="Node" parent="."]
+script = ExtResource("2_qfa85")
+
+[node name="BasicNote" type="Node" parent="RandomNotes"]
+script = ExtResource("3_ec7nc")
+note_name = "Test"
+note_text = "\"Remember to practice [Self Care].\"
+
+Seems this note is a reminder."
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

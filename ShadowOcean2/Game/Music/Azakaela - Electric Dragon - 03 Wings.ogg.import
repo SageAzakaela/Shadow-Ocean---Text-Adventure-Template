@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsksainyrwua5"
+path="res://.godot/imported/Azakaela - Electric Dragon - 03 Wings.ogg-d0c718017e48bd7355811feffbd6c9f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game/Music/Azakaela - Electric Dragon - 03 Wings.ogg"
+dest_files=["res://.godot/imported/Azakaela - Electric Dragon - 03 Wings.ogg-d0c718017e48bd7355811feffbd6c9f5.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

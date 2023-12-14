@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6ehx7kenidvd"
+path="res://.godot/imported/Aza The Tunnel (Extended) (Final).ogg-9fa6a90a10fc3513d45fbed821c04d75.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game/Music/Aza The Tunnel (Extended) (Final).ogg"
+dest_files=["res://.godot/imported/Aza The Tunnel (Extended) (Final).ogg-9fa6a90a10fc3513d45fbed821c04d75.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

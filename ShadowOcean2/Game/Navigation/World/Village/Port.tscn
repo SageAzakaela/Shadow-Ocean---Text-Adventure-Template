@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0m6sm6bdugwv"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_obf57"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_obf57")
+location = "Port"
+history_text = "You reach the Port of Kara Null. The smell of Umbra is in the air, and you can spot several Journers docked here."
+exits = Array[String](["res://Game/Navigation/World/Village/Village.tscn"])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

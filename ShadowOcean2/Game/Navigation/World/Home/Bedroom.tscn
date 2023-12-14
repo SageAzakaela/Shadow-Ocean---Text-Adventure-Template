@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cresdndruduxo"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_rq7oc"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+script = ExtResource("1_rq7oc")
+location = "Bedroom"
+history_text = "Ah yes. The Bedroom. Where you keep your bed. And a pile of dirty clothes."
+exits = ["res://Game/Navigation/World/Home/AlchemyLab.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/Home/Study.tscn"]
+actions = ["res://Game/ActionBar/World/Home/Bedroom/Sleep.tscn", "res://Game/ActionBar/World/Home/Bedroom/Clean.tscn"]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

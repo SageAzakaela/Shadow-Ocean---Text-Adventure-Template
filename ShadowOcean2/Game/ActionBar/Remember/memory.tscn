@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv1c85kqujdcx"]
+
+[ext_resource type="Script" path="res://Memory.gd" id="1_v2t8c"]
+
+[node name="Memory" type="Node"]
+script = ExtResource("1_v2t8c")

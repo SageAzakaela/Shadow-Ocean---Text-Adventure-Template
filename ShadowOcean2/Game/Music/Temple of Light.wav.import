@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cv1w3d7mt7ogx"
+path="res://.godot/imported/Temple of Light.wav-d11813e0920a44e767ffbe794b3b3c0c.sample"
+
+[deps]
+
+source_file="res://Game/Music/Temple of Light.wav"
+dest_files=["res://.godot/imported/Temple of Light.wav-d11813e0920a44e767ffbe794b3b3c0c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

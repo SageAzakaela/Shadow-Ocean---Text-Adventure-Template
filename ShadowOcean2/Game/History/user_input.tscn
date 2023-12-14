@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bq6bl01krserq"]
+
+[node name="UserInput" type="Label"]
+custom_minimum_size = Vector2(600, 0)
+text = ">Use Buttons to Perform an Action, then text will appear."
+autowrap_mode = 3

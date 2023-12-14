@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3agy8uyjaisp"
+path="res://.godot/imported/Temple of Shadow.wav-1044c25698db234b278182dfd270e8cd.sample"
+
+[deps]
+
+source_file="res://Game/Music/Temple of Shadow.wav"
+dest_files=["res://.godot/imported/Temple of Shadow.wav-1044c25698db234b278182dfd270e8cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvfpet8ilq1bn"]
+
+[ext_resource type="Script" path="res://Game/Navigation/location.gd" id="1_dhk8f"]
+
+[node name="Location" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Location
+"
+script = ExtResource("1_dhk8f")
+location = "Study"
+history_text = "Your Study is rather cramped and small, but there are volumes of books here to peruse from and a cozy desk and worn out chair to sit in."
+exits = Array[String](["res://Game/Navigation/World/Home/AlchemyLab.tscn", "res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn"])
+actions = ["res://Game/ActionBar/World/Home/Study/ReadNotes.tscn"]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
