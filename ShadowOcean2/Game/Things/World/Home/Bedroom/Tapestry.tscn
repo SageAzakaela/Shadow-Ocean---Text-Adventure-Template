@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clq2jrogyj6d0"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_2m4q2"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_c1nrs"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2m4q2")
+text = "Thing"
+script = ExtResource("2_c1nrs")
+location = "Bedroom"
+thing_name = "Tapestry"
+thing_content = Array[String](["It's a lovely tapestry, depecting the Origin of the Canvas as known to the locals of Kara Null."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

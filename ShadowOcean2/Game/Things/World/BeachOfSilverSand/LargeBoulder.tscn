@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqn4uuh21xa7v"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_qu5qv"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_pdkec"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qu5qv")
+text = "Thing"
+script = ExtResource("2_pdkec")
+location = "Beach Of Silver Sand East"
+thing_name = "Large Boulder"
+thing_content = Array[String](["You see a rather large boulder here, jutting out of the sand. It's 3 times your size.", "You climb ontop of the boulder. The view from here is stunning.", "You climb atop the boulder once more and notice somethng strange: A carving in the stone."])
+unlock_new_thing = true
+unlock_number = 3
+new_thing = "res://Game/Things/World/BeachOfSilverSand/MysteriousCarving.tscn"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

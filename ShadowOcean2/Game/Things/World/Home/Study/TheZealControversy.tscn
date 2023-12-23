@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkk0gophffclh"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_6ruyg"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_1jfvk"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6ruyg")
+text = "Thing"
+script = ExtResource("2_1jfvk")
+location = "Study"
+thing_name = "The Zeal Controversy"
+thing_content = Array[String](["The use of Zeal in pressure dispersal engines is a hotly debated topic. While it is without a doubt the easiest and most effective way to commit to high-pressure travel in the Umbra, the drawbacks are significant. In order to use Zeal, a living creature must be imprisoned in a containment field within the engine. Maintaining and replacing Zeal engines is a costly and difficult process, and the quality of life of these creatures is often poor.", "Despite these concerns, many argue that the use of Zeal is essential to the way of life most people have come to rely on. They argue that the benefits of high-pressure travel are worth the cost and that other methods simply do not provide the necessary level of effectiveness. Others, however, believe that the sacrifice of the lives of these creatures is simply too great and that alternative methods should be pursued. While there are alternatives to the use of Zeal, none are as effective, and so the debate continues.", "Those who oppose the use of Zeal often point to the possibility of sentience and living matter in the creature used as the source of the Zeal. They argue that this is a form of slavery, and that the living matter used in Zeal engines should not be used as fuel. The debate rages on, and it is a topic that has not yet been resolved."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

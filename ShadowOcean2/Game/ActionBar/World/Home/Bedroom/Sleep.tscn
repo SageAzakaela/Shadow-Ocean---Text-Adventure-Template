@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsx0hs6dtv1ew"]
+[gd_scene load_steps=3 format=3 uid="uid://bsx0hs6dtv1ew"]
 
 [ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_pbqoj"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/Bedroom/SleepCondition.gd" id="2_j3cc8"]
 
 [node name="Sleep" type="Button"]
 custom_minimum_size = Vector2(64, 48)
@@ -9,12 +10,16 @@ focus_mode = 0
 text = "ACTION"
 script = ExtResource("1_pbqoj")
 pass_time = true
+time_cost = 6
 action_name = "Sleep"
 history_text = "You have a lie down."
 update_player = true
 need_ap = false
 ap_cost = -100
 health_effect = -100
-sanity_effect = -100
+
+[node name="Condition" type="Node" parent="."]
+script = ExtResource("2_j3cc8")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="." to="Condition" method="_on_sleep_pressed"]

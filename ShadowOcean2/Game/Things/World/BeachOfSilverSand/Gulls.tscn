@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqawc0woc1a8q"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_iumcv"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_jml52"]
+[ext_resource type="AudioStream" uid="uid://lx4qbuh7oxt0" path="res://Ambience/gulls-on-the-isles-of-scilly-23318.mp3" id="3_u3gfa"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_iumcv")
+text = "Gulls"
+script = ExtResource("2_jml52")
+location = "Beach Of Silver Sand East"
+thing_name = "Gulls"
+thing_content = Array[String](["Flying in the air and around you are some Umbra Gulls. They're quite noisey.", "They are quite beautiful.", "You admire them."])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_u3gfa")
+volume_db = 12.564
+autoplay = true
+bus = &"Ambience"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

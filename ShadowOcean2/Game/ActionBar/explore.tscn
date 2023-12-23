@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://du0x4wda0txy4"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/Explore.gd" id="1_a41vp"]
+
+[node name="Explore" type="Node"]
+script = ExtResource("1_a41vp")

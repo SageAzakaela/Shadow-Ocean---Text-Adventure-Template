@@ -1,6 +1,6 @@
 extends Node
 
-var note_array : Array = []
+var note_array : Array = [] 
 
 func _ready():
 	for child in get_children():

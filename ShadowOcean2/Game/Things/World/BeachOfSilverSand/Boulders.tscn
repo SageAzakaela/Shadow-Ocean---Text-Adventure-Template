@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://brxv0y7la4vic"]
+
+[ext_resource type="Script" path="res://Game/Things/ThingCollection.gd" id="1_la6i7"]
+
+[node name="Boulders" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_la6i7")
+things = Array[String](["res://Game/Things/World/BeachOfSilverSand/LargeBoulder.tscn", "res://Game/Things/World/BeachOfSilverSand/SmallBoulder.tscn", "res://Game/Things/World/BeachOfSilverSand/SmallBoulder2.tscn"])

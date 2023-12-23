@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://crdx8rfy4rdn"]
+
+[ext_resource type="Script" path="res://Game/NPCS/World/VillageOfKaraNull/Tavern/Dakal.gd" id="1_6syxp"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="2_2eh6r"]
+
+[node name="Dakal" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Dakal"
+script = ExtResource("1_6syxp")
+NPC_name = "Dakal"
+
+[node name="Condition" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2eh6r")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

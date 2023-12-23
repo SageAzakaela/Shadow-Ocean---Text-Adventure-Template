@@ -68,7 +68,7 @@ func _ready():
 				"2": {
 					"option_name": "Deny Umbra Sickness",
 					"response_text": "Well, I'm not here to argue; I'm here to help, remember that. Have you looked in a mirror lately? Your pupils are so wide anyone could see that you're going through the thick of it. Have you lost your lenses? I can get you a replacement pair later if you need. You need to cut back on your visual Umbra Exposure.",
-					"next_node": "ask_what_they_mean",
+					"next_node": null,
 				},
 				"3": {
 					"option_name": "Agree to meet them later",
@@ -130,4 +130,3 @@ func _ready():
 			}
 		},
 	}
-

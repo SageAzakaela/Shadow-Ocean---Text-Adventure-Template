@@ -12,5 +12,6 @@ script = ExtResource("1_bekd7")
 location = "Village of Kara Null"
 history_text = "You arrive at the Village of [Kara Null]."
 exits = Array[String](["res://Game/Navigation/World/BeachOfSilverSand/BeachOfSilverSandWest.tscn", "res://Game/Navigation/World/Village/Port.tscn", "res://Game/Navigation/World/Village/Shop.tscn", "res://Game/Navigation/World/Village/Tavern.tscn"])
+NPCS = ["res://Game/NPCS/World/VillageOfKaraNull/Tessa.tscn"]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

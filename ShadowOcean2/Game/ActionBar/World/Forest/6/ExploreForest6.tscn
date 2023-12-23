@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://chhw1qpc5ijyx"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ActionButton.gd" id="1_2aot7"]
+[ext_resource type="PackedScene" uid="uid://cr0uysortxdpb" path="res://Game/ActionBar/explore_container.tscn" id="2_7hbc4"]
+[ext_resource type="PackedScene" uid="uid://du0x4wda0txy4" path="res://Game/ActionBar/explore.tscn" id="3_amlr7"]
+
+[node name="ExploreBeach" type="Button"]
+custom_minimum_size = Vector2(64, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ACTION"
+script = ExtResource("1_2aot7")
+action_type = "explore"
+pass_time = true
+action_name = "Explore"
+update_player = true
+ap_cost = 10
+sanity_effect = -10
+
+[node name="ExploreContainer" parent="." instance=ExtResource("2_7hbc4")]
+
+[node name="Explore" parent="ExploreContainer" instance=ExtResource("3_amlr7")]
+content = "You walk along the beach of silver sand."
+
+[node name="Explore2" parent="ExploreContainer" instance=ExtResource("3_amlr7")]
+content = "You walk along the beach of silver sand. You notice nothing out of the ordinary."
+
+[node name="Explore3" parent="ExploreContainer" instance=ExtResource("3_amlr7")]
+content = "You walk along the beach of silver sand, stumbling across a rather interesting looking seashell washed ashore. You pocket it."
+grant_random_item = true
+random_items = Array[String](["res://Game/Inventory/World/BeachOfSilverSand/Main/RedShell.tscn", "res://Game/Inventory/World/BeachOfSilverSand/Main/BlueShell.tscn", "res://Game/Inventory/World/BeachOfSilverSand/Main/BlackShell.tscn", "res://Game/Inventory/World/BeachOfSilverSand/Main/GoldShell.tscn", "res://Game/Inventory/World/BeachOfSilverSand/Main/WhiteShell.tscn"])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

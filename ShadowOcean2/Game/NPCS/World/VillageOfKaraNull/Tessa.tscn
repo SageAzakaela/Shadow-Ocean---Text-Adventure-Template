@@ -1,0 +1,97 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0tqsvmrutcem"]
+
+[ext_resource type="Script" path="res://Game/NPCS/NPC.gd" id="1_wuwo1"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="3_n5cr3"]
+
+[node name="Tessa" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Tessa"
+script = ExtResource("1_wuwo1")
+NPC_name = "Tessa"
+dialogue_tree = {
+"ExampleNode": {
+"options": {
+"1": {
+"mechanics": {
+"add_item": ["res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn"],
+"add_objective": "res://Game/Objectives/World/Home/Visitor.tscn",
+"objective_description": "The visitor who came to the lighthouse earlier wants to meet at the Tavern in the village.",
+"objective_text": "Go to Tavern"
+},
+"next_node": null,
+"option_name": "Ask About Umbra Sickness",
+"response_text": "Feels like every time I run into you like this it's the same conversation. It'll get better, you just need some rest. But I can see in your eyes that I'm not getting through, so... Umbra Sickness happens to some people who are sensitive to it. It's a tale as old as time. People used to stare into the Umbra and induce visions on purpose; these people were considered sages and wise not so long ago -- but ever since the Syndicate began cracking down on it as an Illness that needed curing, it's just become apparent that the way people think isn't the same as it used to be. They see people like you and they think you're dangerous. And I know you're not. Listen, Keeper. Come to the Tavern when you're ready, and I will try my best to snap you out of this okay? Just think about it. I'll be there. I've got to go now."
+},
+"2": {
+"next_node": "ask_what_they_mean",
+"option_name": "Deny Umbra Sickness",
+"response_text": "Well, I'm not here to argue; I'm here to help, remember that. Have you looked in a mirror lately? Your pupils are so wide anyone could see that you're going through the thick of it. Have you lost your lenses? I can get you a replacement pair later if you need. You need to cut back on your visual Umbra Exposure."
+},
+"3": {
+"mechanics": {
+"add_item": ["res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn"],
+"add_objective": "res://Game/Objectives/World/Home/Visitor.tscn",
+"objective_description": "The visitor who came to the lighthouse earlier wants to meet at the Tavern in the village.",
+"objective_text": "Go to Tavern"
+},
+"next_node": null,
+"option_name": "Agree to meet them later",
+"response_text": "The visitor smiles. Glad to hear it, you won't regret it. I'll see you again, then. Farewell Keeper."
+},
+"4": {
+"next_node": "village_response",
+"option_name": "Say Nothing",
+"response_text": "You elect to say nothing. The visitor nods to you then says, Well, I won't keep you. But when you're done here, you should come meet us at the Tavern in town. I've got some people who are interested in meeting you."
+}
+},
+"text": "Text for Confusion Response goes here."
+},
+"start": {
+"options": {
+"1": {
+"next_node": "village_response",
+"option_name": "Ask about Village",
+"response_text": "Well, it's not the most exciting it's ever been, but I for one like the quiet. Folks around the Tavern are buzzing about the new Pilots in town; maybe you oughta go meet 'em."
+},
+"2": {
+"next_node": "confusion_response",
+"option_name": "Complain of Confusion",
+"response_text": "Nothing new there. You have Umbra Sickness, remember? Comes with the territory in your line of work. Come to the tavern when you get the chance and take a break; might help."
+},
+"3": {
+"mechanics": {
+"add_item": ["res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn"],
+"add_objective": "res://Game/Objectives/World/Home/Visitor.tscn",
+"objective_description": "The visitor who came to the lighthouse earlier wants to meet at the Tavern in the village.",
+"objective_text": "Go to Tavern"
+},
+"next_node": null,
+"option_name": "Act Normal",
+"response_text": "Well, glad to hear you're surviving out here. If there's anything you need, come and see me at the Tavern in town, okay?"
+},
+"4": {
+"next_node": "village_response",
+"option_name": "Ask about supplies",
+"response_text": "Usual stuff, alchemical supplies, fuel for the Lighthouse, some tools... And some reading material. There's some interesting new Journer Pilots I'm sure that have some stuff they'd be willing to trade. You oughta come down to the Tavern and meet 'em before they decide to bail."
+},
+"5": {
+"next_node": "village_response",
+"option_name": "Ask about Kar",
+"response_text": "Cantankerous as ever. Health isn't as good these days. I worry about him, and he worries about you, so here I am."
+}
+},
+"text": ""
+}
+}
+
+[node name="Condition" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_n5cr3")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

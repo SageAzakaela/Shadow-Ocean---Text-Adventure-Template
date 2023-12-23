@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ijnqevhiu2x"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_y8jh5"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_6g527"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y8jh5")
+text = "Thing"
+script = ExtResource("2_6g527")
+location = "Study"
+thing_name = "On Kimini Dalaz"
+thing_content = Array[String](["In the rich tapestry of Umbral Travel history, the name Kimini Dalaz stands as both a beacon of innovation and a source of controversy. Her groundbreaking invention, the Zeal-based Pressure Diffusion Engine, reshaped the world of Umbral Travel and modern alchemy. Yet, her legacy is marred by the ethical dilemmas it posed and the strife it sowed among those who questioned the cost of her brilliance.", "Born into an era of relentless exploration and scientific curiosity, Kimini Dalaz displayed an insatiable appetite for understanding the mysteries of the Canvas from a young age. Raised amidst the fervor of the Great Awakening, she emerged as a gifted alchemist and inventor.
+
+Guided by mentors who recognized her extraordinary talents, Dalaz delved into the arcane world of alchemical theory and experimentation. Her relentless pursuit of knowledge would lead her to explore uncharted territories in the realm of Umbral Travel.", "During the infancy of Umbral Travel, venturing into the depths of the Umbra was fraught with danger. The Canvas held its secrets tightly, and the relentless pressure of the Umbra posed a constant threat to early travelers. Countless lives and valuable resources were lost to the unforgiving Canvas.
+
+It was in the face of these perils that Dalaz set forth on her mission to transform Umbral Travel, forever altering the course of its history.", "Kimini Dalaz's momentous breakthrough came in the form of the Zeal-based Pressure Diffusion Engine, an alchemical marvel with profound implications. Zeal, a mysterious and sentient substance, became the linchpin of her invention. She harnessed the power of Zeal to withstand the crushing pressure of the Umbra, ushering in a new era of safer and more efficient travel.
+
+While her invention promised hope and progress, it also gave rise to a moral conundrum. The Zeal-based Engine relied on the containment of sentient Zeal matter, raising ethical questions about the sacrifice of these beings for the advancement of Umbral Travel.", "The Zeal-based Engine brought Kimini Dalaz both acclaim and infamy. Some hailed her as a visionary, celebrating her as the savior of Umbral Travel. Others, however, viewed her creation with deep skepticism and even malice.
+
+The ethical implications of trapping sentient Zeal matter within the engines raised profound concerns among many; seeing Dalaz's invention as a unethical  bargain, trading the lives of the Zeal entities for the convenience and safety of Umbral Travel. Accusations of cruelty and moral bankruptcy began to tarnish her reputation.", "As the debate raged on, it fractured the world of Umbral Travel into two opposing camps: those who embraced the Zeal-based Engine as a necessary innovation and those who condemned it as an unforgivable affront to the sanctity of life.", "Kimini Dalaz's legacy is one of both triumph and turmoil. Her invention indelibly altered the course of Umbral Travel, rendering it safer and more accessible. Yet, it also left behind a legacy of ethical and moral quandaries that continue to divide  society.
+
+In the annals of Umbral Travel, Dalaz's name remains a point of contention—a reminder that progress often comes at a cost. Her life's work serves as a testament to the complexity of innovation and the enduring debates that shape the destiny of humanity in the Canvas."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

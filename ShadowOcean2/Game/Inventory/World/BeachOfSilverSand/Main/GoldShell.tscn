@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpotb18vacu2o"]
+
+[ext_resource type="Script" path="res://Game/Inventory/Item.gd" id="1_aigf6"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="2_2vjcx"]
+
+[node name="Item" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+script = ExtResource("1_aigf6")
+item_name = "Gold Shell"
+item_description = "A perfectly spiralled shell with a golden sheen to it."
+item_type = "alchemical"
+
+[node name="Item" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ITEM"
+
+[node name="Use" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "USE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2vjcx")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="Item" to="." method="_on_item_pressed"]
+[connection signal="pressed" from="Use" to="." method="_on_use_pressed"]

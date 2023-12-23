@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://t0dpjr3c4a6r"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_gs080"]
+[ext_resource type="Script" path="res://Game/Inventory/alchemy_harvest.gd" id="2_f7evm"]
+
+[node name="AlchemyHarvest" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gs080")
+text = "Harvest"
+script = ExtResource("2_f7evm")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

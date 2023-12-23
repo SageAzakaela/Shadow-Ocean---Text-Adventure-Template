@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://kl36l56gwys5"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_mqiy3"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_nkfhh"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mqiy3")
+text = "Thing"
+script = ExtResource("2_nkfhh")
+location = "Alchemy Lab"
+thing_name = "Vial of Brya"
+thing_type = "alchemy"
+thing_content = Array[String](["A specialized vial made to contain the raw essence of Brya, or liquidity. It looks like ordinary water to the untrained eye."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -13,10 +13,10 @@ script = ExtResource("1_qkwcu")
 action_type = "random_note"
 pass_time = true
 action_name = "Read Notes"
-history_text = "Through all the piles and piles of papers, and books, you uncover a piece of reading material."
+history_text = "Through all the piles and piles of papers, and books, you uncover a piece of reading material. The handwriting is sloppy, oh... it's your handwriting..."
 update_player = true
-ap_cost = 5
-sanity_effect = 5
+ap_cost = 10
+sanity_effect = 10
 
 [node name="RandomNotes" type="Node" parent="."]
 script = ExtResource("2_4gohi")

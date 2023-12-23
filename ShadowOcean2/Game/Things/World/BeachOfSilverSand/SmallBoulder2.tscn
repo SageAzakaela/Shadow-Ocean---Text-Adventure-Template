@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt2k2uhonw7du"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_ybm1y"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_p6wta"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ybm1y")
+text = "Thing"
+script = ExtResource("2_p6wta")
+location = "Beach Of Silver Sand East"
+thing_name = "Small Boulder"
+thing_content = Array[String](["You see a small boulder here, it's roughly half the size of you.", " The waves of the Umbra have left this boulder polished, and it reflects the sky."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

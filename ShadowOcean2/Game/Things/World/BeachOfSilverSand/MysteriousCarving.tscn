@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://5hpbjq2fqy6d"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_mw48v"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_rvmnu"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mw48v")
+text = "Thing"
+script = ExtResource("2_rvmnu")
+location = "Beach Of Silver Sand East"
+thing_name = "Mysterious Carving"
+thing_content = Array[String](["You find a strange carving. It looks to be a symbol of some sorts"])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

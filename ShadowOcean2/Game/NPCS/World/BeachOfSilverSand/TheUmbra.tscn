@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs4i1e1cpp68e"]
+
+[ext_resource type="AudioStream" uid="uid://csw2cpps3grk" path="res://SO_MLS_click_lithium.wav" id="1_2hiwy"]
+[ext_resource type="Script" path="res://Game/NPCS/World/BeachOfSilverSand/TheUmbra.gd" id="1_fdc6v"]
+
+[node name="Umbra" type="Button"]
+custom_minimum_size = Vector2(0, 48)
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Umbra"
+script = ExtResource("1_fdc6v")
+NPC_name = "The Umbra"
+freeNPC = false
+dialogue_tree = {
+"ExampleNode": {
+"options": {
+"1": {
+"mechanics": {
+"add_item": ["res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn"],
+"add_objective": "res://Game/Objectives/World/Home/Visitor.tscn",
+"objective_description": "The visitor who came to the lighthouse earlier wants to meet at the Tavern in the village.",
+"objective_text": "Go to Tavern"
+},
+"next_node": null,
+"option_name": "Ask About Umbra Sickness",
+"response_text": "Feels like every time I run into you like this it's the same conversation. It'll get better, you just need some rest. But I can see in your eyes that I'm not getting through, so... Umbra Sickness happens to some people who are sensitive to it. It's a tale as old as time. People used to stare into the Umbra and induce visions on purpose; these people were considered sages and wise not so long ago -- but ever since the Syndicate began cracking down on it as an Illness that needed curing, it's just become apparent that the way people think isn't the same as it used to be. They see people like you and they think you're dangerous. And I know you're not. Listen, Keeper. Come to the Tavern when you're ready, and I will try my best to snap you out of this okay? Just think about it. I'll be there. I've got to go now."
+},
+"2": {
+"next_node": "ask_what_they_mean",
+"option_name": "Deny Umbra Sickness",
+"response_text": "Well, I'm not here to argue; I'm here to help, remember that. Have you looked in a mirror lately? Your pupils are so wide anyone could see that you're going through the thick of it. Have you lost your lenses? I can get you a replacement pair later if you need. You need to cut back on your visual Umbra Exposure."
+},
+"3": {
+"mechanics": {
+"add_item": ["res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/Fuel.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn", "res://Game/Inventory/World/Home/Visitor/EnergyBar.tscn"],
+"add_objective": "res://Game/Objectives/World/Home/Visitor.tscn",
+"objective_description": "The visitor who came to the lighthouse earlier wants to meet at the Tavern in the village.",
+"objective_text": "Go to Tavern"
+},
+"next_node": null,
+"option_name": "Agree to meet them later",
+"response_text": "The visitor smiles. Glad to hear it, you won't regret it. I'll see you again, then. Farewell Keeper."
+},
+"4": {
+"next_node": "village_response",
+"option_name": "Say Nothing",
+"response_text": "You elect to say nothing. The visitor nods to you then says, Well, I won't keep you. But when you're done here, you should come meet us at the Tavern in town. I've got some people who are interested in meeting you."
+}
+},
+"text": "Text for Confusion Response goes here."
+},
+"start": {
+"options": {
+"1": {
+"next_node": null,
+"option_name": "Look Away",
+"response_text": "Too stare into thToo stare into the Umbra at this range is unadvised without lenses, you think.  Best not tempt fate."
+},
+"2": {
+"next_node": "start",
+"option_name": "Stare Into the Umbra",
+"response_text": "You can't help but look at the enigmatic void ocean."
+}
+},
+"text": "The Umbra intersects with the land here, you see stretching before you, the infinite and engimatic shadow waters which comprise 90% of the known universe. It's iridescent waves lapping against the shores in a rhythmic motion."
+}
+}
+
+[node name="Condition" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_2hiwy")
+volume_db = -12.0
+pitch_scale = 0.1
+autoplay = true
+bus = &"Ambience"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -11,6 +11,7 @@ text = "Location
 script = ExtResource("1_0vf6c")
 location = "Forest 3"
 history_text = "You enter the Forest."
+ap_cost = 5
 exits = Array[String](["res://Game/Navigation/World/Forest/Forest2.tscn", "res://Game/Navigation/World/Forest/Forest4.tscn", "res://Game/Navigation/World/Ruins/Ruins2.tscn"])
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

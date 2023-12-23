@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://k1tea700sroa"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_i36pm"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_2a87n"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_i36pm")
+text = "Thing"
+script = ExtResource("2_2a87n")
+location = "Alchemy Lab"
+thing_name = "Vial of Um"
+thing_type = "alchemy"
+thing_content = Array[String](["A specialized vial that contains the pure essence of Um."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

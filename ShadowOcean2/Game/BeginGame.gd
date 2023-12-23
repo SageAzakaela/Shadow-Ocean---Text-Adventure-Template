@@ -17,9 +17,11 @@ extends Node
 @onready var title = $"../../../../../Background/Title"
 @onready var things_panel = $"../../../../../ThingsPanel"
 @onready var things = $"../../../../../Things"
+@onready var return_home_bar = $"../../../ReturnHomeBar"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	return_home_bar.visible = false
 	things.visible = false
 	things_panel.visible = false
 	image_panel.visible = false
@@ -38,6 +40,7 @@ func _ready():
 	inventory.visible = false
 	
 func _on_action_button_pressed():
+	return_home_bar.visible = true
 	things.visible = true
 	things_panel.visible = true
 	title.visible = false

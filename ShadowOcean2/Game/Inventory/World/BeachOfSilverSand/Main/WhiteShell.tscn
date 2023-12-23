@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7j1fsys4cxjl"]
+
+[ext_resource type="Script" path="res://Game/Inventory/Item.gd" id="1_tj3rx"]
+[ext_resource type="AudioStream" uid="uid://dlq854thksynh" path="res://NOISE BLOCK 6.wav" id="2_66ib4"]
+
+[node name="Item" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+script = ExtResource("1_tj3rx")
+item_name = "White Shell"
+item_description = "A shell that's pure white in color."
+item_type = "alchemical"
+
+[node name="Item" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "ITEM"
+
+[node name="Use" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "USE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_66ib4")
+volume_db = -12.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="pressed" from="Item" to="." method="_on_item_pressed"]
+[connection signal="pressed" from="Use" to="." method="_on_use_pressed"]

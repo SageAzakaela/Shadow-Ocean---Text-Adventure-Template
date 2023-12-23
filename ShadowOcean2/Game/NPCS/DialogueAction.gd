@@ -1,3 +1,4 @@
 extends "res://Game/ActionBar/ActionButton.gd"
 
-var option_name = ""
+func _ready():
+	hide_during_npc = false

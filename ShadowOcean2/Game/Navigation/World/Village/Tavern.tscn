@@ -12,5 +12,6 @@ script = ExtResource("1_fcx42")
 location = "Tavern"
 history_text = "You enter the Tavern."
 exits = Array[String](["res://Game/Navigation/World/Village/Village.tscn"])
+NPCS = Array[String](["res://Game/NPCS/World/VillageOfKaraNull/Tavern/Dakal.tscn"])
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

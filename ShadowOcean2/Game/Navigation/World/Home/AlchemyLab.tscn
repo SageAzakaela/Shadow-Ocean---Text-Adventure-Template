@@ -10,8 +10,8 @@ text = "Location
 "
 script = ExtResource("1_jljjc")
 location = "Alchemy Lab"
-user_input_text = "Went to Alchemy Lab"
 history_text = "Ah yes. The Lab. Your favorite room in your home."
-exits = ["res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/Home/Study.tscn"]
+exits = Array[String](["res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/Home/Study.tscn"])
+actions = ["res://Game/ActionBar/World/Home/AlchemyLab/Harvest.tscn"]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

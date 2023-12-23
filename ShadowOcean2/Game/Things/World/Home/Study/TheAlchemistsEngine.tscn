@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj0jfjarrosvt"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_dj4jv"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_pa4oh"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dj4jv")
+text = "Thing"
+script = ExtResource("2_pa4oh")
+location = "Study"
+thing_name = "The Alchemist's Engine"
+thing_content = Array[String](["The true beginning of modern Journey can be traced back to the brilliant mind of one [Kimini Dalaz], a gifted alchemist who single handedly revolutionized Umbral Travel with the invention of the Zeal-based Pressure Diffusion Engine. Before this, Umbral Travel was a risky and dangerous endeavor, with many lives lost to the treacherous conditions of the Canvas.
+
+", "Dalaz's engine changed all that. It was a marvel of engineering, harnessing the power of Zeal, a mysterious and potent substance that was believed to have sentient properties. The engine was able to withstand the incredible pressure of the Umbra, making longer and more daring Journeys possible.
+", "
+With the invention of the Pressure Diffusion Engine, Journers quickly began to evolve from small and cramped vessels to larger and more specialized ships designed for specific purposes. This was a time of rapid advancement in Journer technology, as more and more discoveries were made about the nature of the Umbra and the materials that could be used to build these incredible machines.
+", "However, the road to modern Journey was not without its challenges. In the early days of Journer construction, many ships were ill-equipped to deal with the dangers of the Canvas, and a great many lives were lost as a result. It was a time of trial and error, but through perseverance and determination, the pioneers of Umbral Travel were able to overcome these obstacles and pave the way for future generations of Journer pilots.
+", "To this day, the legacy of Kimini Dalaz lives on in the Journers that ply the depths of the Umbra. Her invention was a game-changer, transforming Umbral Travel from a risky and uncertain endeavor to a vital and necessary part of life on the Canvas.", ""])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

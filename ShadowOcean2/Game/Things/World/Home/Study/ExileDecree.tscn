@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr21sdg6ojhm0"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_yx4se"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_1fnu5"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yx4se")
+text = "Thing"
+script = ExtResource("2_1fnu5")
+location = "Study"
+thing_name = "Tattered Scroll"
+thing_content = Array[String](["By the Authority of the Syndicate of Alchemical Enlightenment
+
+To all Members and Citizens,
+
+Be it known that the individual known as Aashvey Yin, once esteemed within the Syndicate for their contributions to the understanding of the Umbra, has, through their own actions, fallen into heresy.
+
+The development of Umbra Sickness, a direct result of Aashvey Yin's reckless exposure to the unfiltered essence of the Umbra, has rendered them a danger to the stability and purity of our knowledge.
+
+By the judgment of the Syndicate, Aashvey Yin is hereby declared a heretic and is to be exiled from the sacred confines of our enlightened society. This decree ensures their removal to a distant Colony world, where they shall no longer pose a threat to the sanctity of alchemical progress.
+
+May the Syndicate's mercy shine upon those who abide by its tenets and condemn those who stray from the path of enlightenment.
+
+In Witness Whereof, the Seal of the Syndicate is affixed."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

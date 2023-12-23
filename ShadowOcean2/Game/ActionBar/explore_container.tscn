@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr0uysortxdpb"]
+
+[ext_resource type="Script" path="res://Game/ActionBar/ExploreContainer.gd" id="1_yk513"]
+
+[node name="ExploreContainer" type="Node"]
+script = ExtResource("1_yk513")

@@ -19,9 +19,18 @@ extends HBoxContainer
 @export var item_skill : String = ""
 
 func _ready():
-	Player.inventory.append(item_name)
-	item.text = item_name
+	if item_type == "key":
+		Player.inventory.append(item_name)
+		item.text = item_name
+	if item_type == "basic":
+		Player.inventory.append(item_name)
+		item.text = item_name
+	if item_type == "alchemical":
+		Player.inventory.append(item_name)
+		item.text = item_name
 	if item_type == "consumable":
+		Player.inventory.append(item_name)
+		item.text = item_name
 		$Use.visible = true
 	else:
 		$Use.visible = false

@@ -5,13 +5,16 @@ extends Button
 @onready var npc_container = $"../../../../NPCPanel/ScrollContainer/NPCContainer"
 @onready var action_bar = $"../../../../ActionPanel/VBoxContainer/ActionBar"
 @onready var interact_noise = $"../../../../InteractNoise"
+@onready var things_container = $"../../../../ThingsPanel/ScrollContainer/ThingsContainer"
 
 
 @export var location : String = ""
 @export_multiline var history_text : String = ""
 @export var ap_cost : int = 0
+@export var time_cost : int = 1
 @export var exits : Array[String] = []
-@export var NPCS : Array = []
+@export var NPCS : Array[String] = []
+@export var things : Array[String] = []
 @export var actions : Array = []
 @export var locked : bool = false
 @export_multiline var locked_text : String = ""
@@ -21,8 +24,14 @@ extends Button
 
 func _ready():
 	text = location
-   
-func _on_pressed():
+ 
+func _process(_delta):
+	if Player.current_npc != "":
+		disabled = true
+	else:
+		disabled = false
+
+func _on_pressed():		
 	if locked == true:
 		if Player.inventory.has(key):
 			write_history_unlock()
@@ -30,15 +39,22 @@ func _on_pressed():
 		else:
 			write_history_locked()
 	else:
-		Player.last_location = Player.current_location
-		Player.current_location = location
-		Player.ap -= ap_cost
-		write_history()
-		spawn_exits()
-		spawn_npcs()
-		spawn_actions()
-		interact_noise.play()
-		queue_free()
+		if Player.ap >= ap_cost:
+			Player.last_location = Player.current_location
+			Player.current_location = location
+			Player.ap -= ap_cost
+			write_history()
+			spawn_exits()
+			spawn_npcs()
+			spawn_actions()
+			spawn_things()
+			GlobalTime.changeTime(time_cost)
+			interact_noise.play()
+			queue_free()
+		else:
+			var response_label = preload("res://Game/History/respnse.tscn").instantiate()
+			history_container.add_child(response_label)
+			response_label.text = "You don't have enough Action Points to go there.\n\nGet some rest."
 
 func write_history_unlock():
 	var response_label = preload("res://Game/History/respnse.tscn").instantiate()
@@ -55,6 +71,13 @@ func write_history():
 	history_container.add_child(response_label)
 	response_label.text = history_text
 
+
+func spawn_things():
+	for child in things_container.get_children():
+		child.queue_free()
+	for things_path in things:
+		var thing_to_instance = load(things_path).instantiate()
+		things_container.add_child(thing_to_instance)
 
 func spawn_exits():
 	for child in navigation_container.get_children():

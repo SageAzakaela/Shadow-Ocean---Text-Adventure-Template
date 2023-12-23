@@ -6,6 +6,7 @@ extends Button
 @onready var remember_mechanic = $"../../MemoryContainer/RememberMechanic"
 @onready var item_container = $"../../../../InventoryPanel/ItemScroll/ItemContainer"
 @onready var interact_noise = $"../../../../InteractNoise"
+@onready var things_container = $"../../../../ThingsPanel/ScrollContainer/ThingsContainer"
 
 
 
@@ -15,11 +16,11 @@ extends Button
 #RandomNote : As if looking through a pile of notes, picking up just one. 
 #Book Actions will create a new set of actions to allow you to read a book/journal
 @export var action_type : String = "basic"
-
+@export var hide_during_npc : bool = true
 @export var destroy_action : bool = false
 
 @export var pass_time : bool = false
-@export var time_cost : int = 0
+@export var time_cost : int = 1
 
 @export var change_location : bool = false
 @export var new_location : String = "" #Provide new current location name
@@ -75,13 +76,25 @@ func _ready():
 	randomize()
 	text = action_name
 
+func _process(_delta):
+	if Player.ap < ap_cost:
+		disabled = true
+	else:
+		disabled = false
+	
+	if Player.current_npc != "" and hide_during_npc == true:
+		visible = false
+	else:
+		visible = true
+
+
 func _on_pressed():
 	if need_ap == true and Player.ap >0:
 		interact_noise.play()
 		if update_player == true:
 			player_update()
 		if pass_time == true:
-			increment_time()
+			increment_time(time_cost)
 		if change_location == true:
 			location_change()
 		if grant_skill == true:
@@ -97,6 +110,10 @@ func _on_pressed():
 		elif action_type == "random_note":
 			basic_response()
 			random_note()
+		elif action_type == "explore":
+			explore()
+		elif action_type == "alchemy_harvest":
+			alchemy("harvest")
 		if destroy_action == true:
 			queue_free()
 	elif need_ap == false:
@@ -104,7 +121,7 @@ func _on_pressed():
 		if update_player == true:
 			player_update()
 		if pass_time == true:
-			increment_time()
+			increment_time(time_cost)
 		if change_location == true:
 			location_change()
 		if grant_skill == true:
@@ -118,12 +135,41 @@ func _on_pressed():
 		elif action_type == "random_note":
 			basic_response()
 			random_note()
+		elif action_type == "explore":
+			explore()
 		if destroy_action == true:
 			queue_free()
 	else:
 		var response_label = preload("res://Game/History/respnse.tscn").instantiate()
 		history_container.add_child(response_label)
 		response_label.text = "You don't have enough Action Points for that Action.\n\nGet some rest."
+
+func alchemy(type):
+	var response_label = preload("res://Game/History/respnse.tscn").instantiate()
+	history_container.add_child(response_label)
+	response_label.text = "You go to your harvesting station, where materials can be broken down into their primary essences..."
+	if type == "harvest":
+		for item in item_container.get_children():
+			if item.item_type == "alchemical":
+				var harvest_button = preload("res://Game/Inventory/alchemy_harvest.tscn").instantiate()
+				item.add_child(harvest_button)
+
+
+func explore():
+	var response_label = preload("res://Game/History/respnse.tscn").instantiate()
+	var random_index = randi() % $ExploreContainer.get_child_count()
+	var random_exploration = $ExploreContainer.get_child(random_index)
+	history_container.add_child(response_label)
+	response_label.text = random_exploration.content
+	if random_exploration.add_things == true:
+		for thing in random_exploration.things:
+			var thing_path = load(random_exploration.things[thing]).instantiate()
+			things_container.add_child(thing_path)
+	if random_exploration.grant_random_item == true:
+		var random_item = randi() % random_exploration.random_items.size()
+		var item_to_add = load(random_exploration.random_items[random_item]).instantiate()
+		item_container.add_child(item_to_add)
+
 
 func random_note():
 	if $RandomNotes.note_array.size() > 0:
@@ -174,9 +220,8 @@ func player_update():
 	Player.health -= health_effect
 	Player.sanity -= sanity_effect
 
-func increment_time():
-	#Here we'll want to just do our time passage logic on our global_time singleton
-	pass
+func increment_time(time_multiplier):
+	GlobalTime.changeTime(time_multiplier)
 
 func add_item():
 	Player.inventory.append(item_to_grant)
@@ -184,6 +229,7 @@ func add_item():
 	item_to_add.item_name = item_name
 	item_to_add.item_description = item_description
 	item_container.add_child(item_to_add)
+	item_to_add.item.text = item_name
 	item_to_add.item_type = item_type
 	item_to_add.base_components = base_components
 	item_to_add.health_effect = item_health_effect

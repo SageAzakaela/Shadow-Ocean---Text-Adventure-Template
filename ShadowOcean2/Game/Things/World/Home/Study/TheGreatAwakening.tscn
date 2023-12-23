@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckgo1k34pn8e4"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_qmmdm"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_k8u4f"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qmmdm")
+text = "Thing"
+script = ExtResource("2_k8u4f")
+location = "Study"
+thing_name = "The Great Awakening"
+thing_content = Array[String](["During the Great Awakening, humanity experienced a surge of scientific and technological advancement that transformed their understanding of the Canvas. It was during this time that they first began to explore the Umbra, or the Below as it is sometimes called, and to develop the technology necessary for Umbral Travel.", "Scientists and alchemists were working on theories and prototypes for ships that could withstand the harsh conditions of the Umbra. They recognized the potential for exploration, discovery, and the exploitation of resources that the Umbra offered, and they were determined to be the first to unlock its secrets.", "Their early efforts were fraught with setbacks and difficulties. Ships were too small and ill-equipped to navigate the vast and treacherous expanse of the Umbra. The lack of effective propulsion technology and adequate protection from the intense pressures of the Umbra made early Umbral Travel extremely dangerous.", "Despite the challenges, the desire to explore and discover drove humanity to persist in their efforts to create functional Journers. They were driven by a pioneering spirit, an insatiable curiosity, and a deep desire to uncover the mysteries of the universe.", "inally, after many Cycles of experimentation and research, the first successful Journer was constructed. It was a massive achievement, and it marked the beginning of a new era of exploration and discovery. The age of Journey had begun, and humanity was on the cusp of uncovering the vast, unexplored regions of the Canvas."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

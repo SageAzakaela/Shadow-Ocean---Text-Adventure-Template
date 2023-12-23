@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Player="*res://globals/Player.gd"
+Home="*res://globals/Home.gd"
+GlobalTime="*res://globals/global_time.gd"
 
 [display]
 

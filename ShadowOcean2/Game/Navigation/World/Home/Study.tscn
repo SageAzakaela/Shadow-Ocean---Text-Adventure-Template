@@ -12,6 +12,7 @@ script = ExtResource("1_dhk8f")
 location = "Study"
 history_text = "Your Study is rather cramped and small, but there are volumes of books here to peruse from and a cozy desk and worn out chair to sit in."
 exits = Array[String](["res://Game/Navigation/World/Home/AlchemyLab.tscn", "res://Game/Navigation/World/Home/Bedroom.tscn", "res://Game/Navigation/World/Home/ControlRoom.tscn", "res://Game/Navigation/World/Home/LivingRoom.tscn"])
+things = Array[String](["res://Game/Things/World/Home/Study/ExileDecree.tscn", "res://Game/Things/World/Home/Study/TheAlchemistsEngine.tscn", "res://Game/Things/World/Home/Study/KiminiDalaz.tscn", "res://Game/Things/World/Home/Study/TheZealControversy.tscn"])
 actions = ["res://Game/ActionBar/World/Home/Study/ReadNotes.tscn"]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

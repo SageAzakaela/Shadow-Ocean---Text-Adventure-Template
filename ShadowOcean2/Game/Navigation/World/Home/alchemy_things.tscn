@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jie4hk8w7lpd"]
+
+[ext_resource type="Script" path="res://Game/Navigation/World/Home/AlchemyThings.gd" id="1_jnmqq"]
+
+[node name="AlchemyThings" type="Node"]
+script = ExtResource("1_jnmqq")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://d3nfs3u5jd3pi"]
+[gd_scene load_steps=71 format=3 uid="uid://d3nfs3u5jd3pi"]
 
 [ext_resource type="AudioStream" uid="uid://bodelflr24igj" path="res://Game/Music/azaFMP3_scene_GirlInTheMirror.mp3" id="1_dh6xk"]
 [ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_xte7i"]
@@ -49,10 +49,34 @@
 [ext_resource type="Texture2D" uid="uid://dhuu2ib82yyuw" path="res://Game/Images/Ruins2.png" id="29_cb01s"]
 [ext_resource type="AudioStream" uid="uid://qeppxkiom2ck" path="res://Ambience/birds-singing-calm-river-nature-ambient-sound-127411.mp3" id="30_aa0wp"]
 [ext_resource type="AudioStream" uid="uid://bjqni48pbi6gr" path="res://Ambience/wind-in-trees-117477.mp3" id="40_3leiy"]
+[ext_resource type="Script" path="res://Game/Images/TimeOverlay.gd" id="40_gosq5"]
 [ext_resource type="Texture2D" uid="uid://b660fjxnog77q" path="res://Game/NPCImages/Visitor.png" id="41_u0xuw"]
 [ext_resource type="Script" path="res://Game/NPCImages/NPCImage.gd" id="42_ywe33"]
+[ext_resource type="Texture2D" uid="uid://dd7t1u503x4j2" path="res://Game/NPCImages/Umbra.png" id="43_mba02"]
+[ext_resource type="Texture2D" uid="uid://vpqbn1guddpq" path="res://Game/NPCImages/Tessa.png" id="44_0ea2x"]
+[ext_resource type="Texture2D" uid="uid://dwtx8r8cju2pk" path="res://Game/NPCImages/Dakal.png" id="45_6621x"]
+[ext_resource type="Texture2D" uid="uid://bx0aifbe0nkdj" path="res://Game/NPCImages/Bartender.png" id="46_fyuei"]
+[ext_resource type="Texture2D" uid="uid://dboyyqkgb62vw" path="res://Game/NPCImages/Shopkeeper.png" id="47_5rdql"]
+[ext_resource type="Texture2D" uid="uid://kh6uwn2f5gtp" path="res://Game/NPCImages/LeonaVaal.png" id="48_62qp6"]
+[ext_resource type="Texture2D" uid="uid://bjrl71ynm0m2d" path="res://Game/NPCImages/BaakDorya.png" id="49_4xnou"]
+[ext_resource type="Texture2D" uid="uid://b6qsldqxlf4jl" path="res://Game/NPCImages/DyaazGoro.png" id="50_swhl0"]
+[ext_resource type="Script" path="res://Game/Music/MusicBar.gd" id="55_1x4jl"]
+[ext_resource type="AudioStream" uid="uid://bohb0d85eqlg2" path="res://Game/Music/Answer Me.mp3" id="60_87ohx"]
+[ext_resource type="AudioStream" uid="uid://t10g4vh4goy8" path="res://Game/Music/hydroverse7AndDeeperStill.ogg" id="61_77npv"]
+[ext_resource type="Script" path="res://Game/ActionBar/World/Home/ReturnHomeCondition.gd" id="62_kwefw"]
+[ext_resource type="AudioStream" uid="uid://blt2deljsu8jl" path="res://Game/Music/ice-dragon-try-1.mp3" id="62_mlkjg"]
+[ext_resource type="AudioStream" uid="uid://dmvwwn7cqirlc" path="res://Game/Music/Just Breathe.mp3" id="63_lguj6"]
+[ext_resource type="AudioStream" uid="uid://bn0qjkl2qi52c" path="res://Game/Music/Spectra.mp3" id="64_3i0wi"]
+[ext_resource type="AudioStream" uid="uid://cwai8yibn0v1l" path="res://Game/Music/Through Darkness.mp3" id="65_14sqn"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2dt57"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gktsl"]
+blend_mode = 3
 
 [node name="Main" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,11 +84,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_dh6xk")
-volume_db = -12.0
-pitch_scale = 0.9
 
 [node name="InteractNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6hmri")
@@ -77,6 +96,7 @@ pitch_scale = 0.63
 
 [node name="Background" type="PanelContainer" parent="."]
 modulate = Color(0.188235, 0.188235, 0.188235, 1)
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.00154321
@@ -85,7 +105,6 @@ anchor_bottom = 0.998457
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="Background"]
 layout_mode = 2
@@ -95,6 +114,7 @@ horizontal_alignment = 1
 
 [node name="ImagePanel" type="PanelContainer" parent="."]
 clip_children = 2
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
@@ -104,7 +124,6 @@ anchor_bottom = 0.317901
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="ImagePanel"]
 layout_mode = 2
@@ -479,6 +498,7 @@ autoplay = true
 bus = &"Ambience"
 
 [node name="SeekerVillage" type="TextureRect" parent="ImagePanel"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
@@ -494,7 +514,67 @@ pitch_scale = 0.9
 autoplay = true
 bus = &"Ambience"
 
+[node name="Silv" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_2dt57")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.294118, 0.470588, 0.745098, 0.470588)
+script = ExtResource("40_gosq5")
+
+[node name="Amb" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_2dt57")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.733333, 0.337255, 0.215686, 0.317647)
+script = ExtResource("40_gosq5")
+sky_color = 1
+
+[node name="Ros" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_2dt57")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.866667, 0.054902, 0.247059, 0.317647)
+script = ExtResource("40_gosq5")
+sky_color = 2
+
+[node name="Magen" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_gktsl")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.788235, 0, 0.698039, 0.513726)
+script = ExtResource("40_gosq5")
+sky_color = 3
+
+[node name="Viol" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_gktsl")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.619608, 0.101961, 1, 0.317647)
+script = ExtResource("40_gosq5")
+sky_color = 4
+
+[node name="Cya" type="ColorRect" parent="ImagePanel"]
+visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_gktsl")
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0.431373, 0.968627, 0.317647)
+script = ExtResource("40_gosq5")
+sky_color = 5
+
 [node name="HistoryPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
@@ -504,7 +584,6 @@ anchor_bottom = 0.521605
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="HistoryPanel"]
 layout_mode = 2
@@ -519,6 +598,7 @@ alignment = 1
 script = ExtResource("2_rkrji")
 
 [node name="NavigationPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
@@ -528,7 +608,6 @@ anchor_bottom = 0.805556
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="NavigationPanel"]
 layout_mode = 2
@@ -544,6 +623,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="NPCPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.405382
@@ -553,7 +633,6 @@ anchor_bottom = 0.805556
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="NPCPanel"]
 layout_mode = 2
@@ -570,6 +649,7 @@ size_flags_vertical = 3
 
 [node name="CurrentNPCPanel" type="PanelContainer" parent="."]
 clip_children = 2
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.233507
@@ -579,20 +659,98 @@ anchor_bottom = 0.805556
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="CurrentNPCPanel"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
 [node name="Visitor" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
 layout_mode = 2
 texture = ExtResource("41_u0xuw")
 expand_mode = 3
 script = ExtResource("42_ywe33")
 npc = "Visitor"
 
+[node name="TheUmbra" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("43_mba02")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "The Umbra"
+
+[node name="Tessa" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("44_0ea2x")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "Tessa"
+
+[node name="Dakal" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("45_6621x")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "Dakal"
+
+[node name="Bartender" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("46_fyuei")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "Bartender"
+
+[node name="Shopkeeper" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("47_5rdql")
+expand_mode = 3
+script = ExtResource("42_ywe33")
+npc = "Shopkeeper"
+
+[node name="LeonaVaal" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("48_62qp6")
+expand_mode = 3
+flip_h = true
+script = ExtResource("42_ywe33")
+npc = "Leeona Vaal"
+
+[node name="BaakDorya" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("49_4xnou")
+expand_mode = 3
+flip_h = true
+script = ExtResource("42_ywe33")
+npc = "Baak Dorya"
+
+[node name="DyaazGoro" type="TextureRect" parent="CurrentNPCPanel"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("50_swhl0")
+expand_mode = 3
+flip_h = true
+script = ExtResource("42_ywe33")
+npc = "Dyaaz Goro"
+
 [node name="ThingsPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.597222
@@ -602,22 +760,25 @@ anchor_bottom = 0.805556
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="ThingsPanel"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ThingsPanel"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
-[node name="ThingsContainer" type="GridContainer" parent="ThingsPanel/ScrollContainer"]
+[node name="ThingsContainer" type="VBoxContainer" parent="ThingsPanel/ScrollContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="SkillPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.792535
@@ -628,7 +789,6 @@ offset_bottom = 3.05176e-05
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="SkillPanel"]
 layout_mode = 2
@@ -646,6 +806,7 @@ size_flags_vertical = 3
 theme = ExtResource("1_xte7i")
 
 [node name="ObjectivePanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.597222
@@ -655,7 +816,6 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="ObjectivePanel"]
 layout_mode = 2
@@ -687,6 +847,7 @@ objective_description = "You're having trouble remembering exactly who [you] are
 script = ExtResource("5_qd2oj")
 
 [node name="InfoPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.597222
@@ -696,7 +857,6 @@ anchor_bottom = 0.226852
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="InfoPanel"]
 layout_mode = 2
@@ -740,6 +900,11 @@ layout_mode = 2
 theme = ExtResource("1_xte7i")
 text = "Sanity:"
 
+[node name="Credits" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoLabelContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "Credits:"
+
 [node name="InfoContainer" type="VBoxContainer" parent="InfoPanel/InfoPanelContainer/InfoHSeperator"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -771,7 +936,13 @@ layout_mode = 2
 theme = ExtResource("1_xte7i")
 text = "insane"
 
+[node name="Credits" type="Label" parent="InfoPanel/InfoPanelContainer/InfoHSeperator/InfoContainer"]
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+text = "insane"
+
 [node name="InventoryPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.789931
@@ -781,7 +952,6 @@ anchor_bottom = 0.816358
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="InventoryPanel"]
 layout_mode = 2
@@ -799,6 +969,7 @@ size_flags_vertical = 3
 theme = ExtResource("1_xte7i")
 
 [node name="ActionPanel" type="PanelContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.845679
@@ -807,25 +978,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xte7i")
-metadata/_edit_use_anchors_ = true
 
 [node name="BGPANEL" type="Panel" parent="ActionPanel"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ActionPanel"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 alignment = 2
 
 [node name="MemoryContainer" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 48)
+texture_filter = 1
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
 [node name="RememberMechanic" parent="ActionPanel/VBoxContainer/MemoryContainer" instance=ExtResource("8_uycf0")]
-
-[node name="EmptyMemory" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
 
 [node name="KaraNull" parent="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" instance=ExtResource("9_0d0et")]
 
@@ -879,6 +1050,7 @@ memory_key = "your name"
 memory_content = Array[String](["What is it? Darn it. You hate it when this happens. New Plan. Just respond to \"Hey You\" or whatever people call you. \"Lighthouse Person\" You recall someone from the [village] nearby saying once.", "Yeah. It's just not coming to you. You remember you used to know it. You remember it was a good name. But what it was, escapes you.", "You've kind of come to accept that you've simply forgotten. Has it really been so long since you needed to use it though?", "It's painful to keep thinking about this. You don't need it.", "Forget it! You don't want to remember!"])
 
 [node name="RememberTextEntry" type="LineEdit" parent="ActionPanel/VBoxContainer/MemoryContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 1
@@ -889,12 +1061,31 @@ clear_button_enabled = true
 caret_blink = true
 script = ExtResource("18_qyrw7")
 
+[node name="MusicBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_xte7i")
+script = ExtResource("55_1x4jl")
+MusicArray = Array[AudioStream]([ExtResource("1_dh6xk"), ExtResource("60_87ohx"), ExtResource("61_77npv"), ExtResource("62_mlkjg"), ExtResource("63_lguj6"), ExtResource("64_3i0wi"), ExtResource("65_14sqn")])
+
+[node name="FrequencyTuner" type="HSlider" parent="ActionPanel/VBoxContainer/MusicBar"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10000.0
+tick_count = 34
+ticks_on_borders = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="ActionPanel/VBoxContainer/MusicBar"]
+
 [node name="ActionBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
 [node name="ActionButton" parent="ActionPanel/VBoxContainer/ActionBar" instance=ExtResource("5_ej4v7")]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 destroy_action = true
@@ -913,22 +1104,32 @@ add_memory_context = Array[String](["Yes, yes. You started the game.  That wasn'
 [node name="BeginGame" type="Node" parent="ActionPanel/VBoxContainer/ActionBar/ActionButton"]
 script = ExtResource("8_ia7rv")
 
-[node name="MusicBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
-visible = false
+[node name="ReturnHomeBar" type="HBoxContainer" parent="ActionPanel/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("1_xte7i")
 
-[node name="FrequencyTuner" type="HSlider" parent="ActionPanel/VBoxContainer/MusicBar"]
+[node name="ReturnHome" parent="ActionPanel/VBoxContainer/ReturnHomeBar" instance=ExtResource("5_ej4v7")]
+texture_filter = 1
 layout_mode = 2
-size_flags_horizontal = 3
-max_value = 10000.0
-tick_count = 34
-ticks_on_borders = true
+theme = ExtResource("1_xte7i")
+text = "Return to Home"
+change_location = true
+new_location = "Home"
+exits = ["res://Game/Navigation/World/Home/Bedroom.tscn"]
+action_name = "Return Home"
+history_text = "The next thing you know you're back home. Time seems to have past in the blink of an eye."
+update_player = true
+need_ap = false
+ap_cost = -100
+sanity_effect = 30
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="ActionPanel/VBoxContainer/MusicBar"]
+[node name="Condition" type="Node" parent="ActionPanel/VBoxContainer/ReturnHomeBar/ReturnHome"]
+script = ExtResource("62_kwefw")
 
 [node name="Locations" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
@@ -940,6 +1141,7 @@ theme = ExtResource("1_xte7i")
 text = "Locations"
 
 [node name="People" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.415799
@@ -948,9 +1150,9 @@ anchor_right = 0.664931
 anchor_bottom = 0.574074
 theme = ExtResource("1_xte7i")
 text = "People"
-metadata/_edit_use_anchors_ = true
 
 [node name="Things" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.597222
@@ -961,9 +1163,9 @@ offset_top = 3.05176e-05
 offset_right = -6.10352e-05
 theme = ExtResource("1_xte7i")
 text = "Things"
-metadata/_edit_use_anchors_ = true
 
 [node name="Objectives" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.597222
@@ -974,6 +1176,7 @@ theme = ExtResource("1_xte7i")
 text = "Objectives"
 
 [node name="Skills" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.792535
@@ -983,9 +1186,9 @@ anchor_bottom = 0.265433
 theme = ExtResource("1_xte7i")
 text = "Skills
 "
-metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.792535
@@ -997,13 +1200,13 @@ offset_bottom = -3.05176e-05
 theme = ExtResource("1_xte7i")
 text = "Inventory
 "
-metadata/_edit_use_anchors_ = true
 
 [connection signal="child_entered_tree" from="HistoryPanel/ScrollContainer/HistoryContainer" to="HistoryPanel/ScrollContainer/HistoryContainer" method="_on_child_entered_tree"]
 [connection signal="pressed" from="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective" to="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective" method="_on_pressed"]
 [connection signal="text_changed" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" method="_on_remember_text_entry_text_changed"]
 [connection signal="text_submitted" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ObjectivePanel/ScrollContainer/ObjectiveContainer/PrimaryObjective/Condition" method="_on_remember_text_entry_text_submitted"]
 [connection signal="text_submitted" from="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" to="ActionPanel/VBoxContainer/MemoryContainer/RememberMechanic" method="_on_remember_text_entry_text_submitted"]
+[connection signal="value_changed" from="ActionPanel/VBoxContainer/MusicBar/FrequencyTuner" to="ActionPanel/VBoxContainer/MusicBar" method="_on_frequency_tuner_value_changed"]
 [connection signal="pressed" from="ActionPanel/VBoxContainer/ActionBar/ActionButton" to="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" method="_on_action_button_pressed"]
 [connection signal="pressed" from="ActionPanel/VBoxContainer/ActionBar/ActionButton" to="ActionPanel/VBoxContainer/ActionBar/ActionButton/BeginGame" method="_on_action_button_pressed"]
-[connection signal="value_changed" from="ActionPanel/VBoxContainer/MusicBar/FrequencyTuner" to="ActionPanel/VBoxContainer/MusicBar" method="_on_frequency_tuner_value_changed"]
+[connection signal="pressed" from="ActionPanel/VBoxContainer/ReturnHomeBar/ReturnHome" to="ActionPanel/VBoxContainer/MemoryContainer/RememberTextEntry" method="_on_action_button_pressed"]

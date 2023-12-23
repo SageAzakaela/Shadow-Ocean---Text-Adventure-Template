@@ -11,6 +11,9 @@ text = "Location
 script = ExtResource("1_46myd")
 location = "Beach Of Silver Sand"
 history_text = "You arrive at the Beach of Silver sand.  you can hear the gentle crashing of waves of the [Umbra] as they meet with the land. The sight is awe inspriing."
+ap_cost = 5
 exits = Array[String](["res://Game/Navigation/World/Home/LivingRoom.tscn", "res://Game/Navigation/World/BeachOfSilverSand/BeachOfSilverSandEast.tscn", "res://Game/Navigation/World/BeachOfSilverSand/BeachOfSilverSandWest.tscn", "res://Game/Navigation/World/Forest/Forest1.tscn"])
+NPCS = Array[String](["res://Game/NPCS/World/BeachOfSilverSand/TheUmbra.tscn"])
+actions = ["res://Game/ActionBar/World/BeachOfSilverSand/Main/ExploreBeach.tscn"]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -11,6 +11,7 @@ text = "Location
 script = ExtResource("1_seyqo")
 location = "Seeker Village"
 history_text = "You reach the Seeker Village at the top of the mountain."
+ap_cost = 5
 exits = Array[String](["res://Game/Navigation/World/Mountain/Mountain3.tscn"])
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

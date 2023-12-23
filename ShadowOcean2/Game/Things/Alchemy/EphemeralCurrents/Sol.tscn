@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://6wj07n5eejwe"]
+
+[ext_resource type="Theme" uid="uid://kpsxvxakcu2x" path="res://resources/theme/Main.tres" id="1_l2atf"]
+[ext_resource type="Script" path="res://Game/Things/Thing.gd" id="2_l22ca"]
+
+[node name="Thing" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l2atf")
+text = "Thing"
+script = ExtResource("2_l22ca")
+location = "Alchemy Lab"
+thing_name = "Vial of Sol"
+thing_type = "alchemy"
+thing_content = Array[String](["A specialized vial that contains the pure essence of Sol. It radiates an aura of life, you think to yourself."])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
